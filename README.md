@@ -8,6 +8,8 @@ It can save IP, port, Streamname, format and redundancy in presets of our DAWs (
 
 The SCAN function on our VBAN Emitters (VBANReceptor.vst3) is coming soon.
 
+This is a stereo plugin version. If stream has more than 2 channels, plugin will take 2 firsts. If stream is mono you will hear it on plugin left channel.
+
 Let's test it together!
 
 To build it on Linux just clone this repo, go to Builds/LinuxMakeFile, open terminal there and type "make" It will be places to ~/vst3, just move it to directory what you want (if you want).
