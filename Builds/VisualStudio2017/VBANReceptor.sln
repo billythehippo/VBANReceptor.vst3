@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 15
+
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VBANReceptor - Standalone Plugin", "VBANReceptor_StandalonePlugin.vcxproj", "{30C5F920-E0AA-37DA-7C4D-B2E76A7800A0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{85A89DD8-D5E4-C6C0-557D-74C58DBD31ED} = {85A89DD8-D5E4-C6C0-557D-74C58DBD31ED}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VBANReceptor - VST3", "VBANReceptor_VST3.vcxproj", "{B0F549ED-F7E4-38ED-EA29-B630B0553CCB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{85A89DD8-D5E4-C6C0-557D-74C58DBD31ED} = {85A89DD8-D5E4-C6C0-557D-74C58DBD31ED}
+		{7AFB4EFE-15FB-CA8B-F3E8-915AC4727A06} = {7AFB4EFE-15FB-CA8B-F3E8-915AC4727A06}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VBANReceptor - LV2 Plugin", "VBANReceptor_LV2Plugin.vcxproj", "{68190E7C-1341-AF9D-C893-3FB6295FB8FB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{85A89DD8-D5E4-C6C0-557D-74C58DBD31ED} = {85A89DD8-D5E4-C6C0-557D-74C58DBD31ED}
+		{4EB2E32E-F9C7-C7C1-666B-1E7083EC81F1} = {4EB2E32E-F9C7-C7C1-666B-1E7083EC81F1}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VBANReceptor - Shared Code", "VBANReceptor_SharedCode.vcxproj", "{85A89DD8-D5E4-C6C0-557D-74C58DBD31ED}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VBANReceptor - LV2 Manifest Helper", "VBANReceptor_LV2ManifestHelper.vcxproj", "{4EB2E32E-F9C7-C7C1-666B-1E7083EC81F1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VBANReceptor - VST3 Manifest Helper", "VBANReceptor_VST3ManifestHelper.vcxproj", "{7AFB4EFE-15FB-CA8B-F3E8-915AC4727A06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0F549ED-F7E4-38ED-EA29-B630B0553CCB}.Debug|x64.ActiveCfg = Debug|x64
+		{B0F549ED-F7E4-38ED-EA29-B630B0553CCB}.Debug|x64.Build.0 = Debug|x64
+		{B0F549ED-F7E4-38ED-EA29-B630B0553CCB}.Release|x64.ActiveCfg = Release|x64
+		{B0F549ED-F7E4-38ED-EA29-B630B0553CCB}.Release|x64.Build.0 = Release|x64
+		{30C5F920-E0AA-37DA-7C4D-B2E76A7800A0}.Debug|x64.ActiveCfg = Debug|x64
+		{30C5F920-E0AA-37DA-7C4D-B2E76A7800A0}.Debug|x64.Build.0 = Debug|x64
+		{30C5F920-E0AA-37DA-7C4D-B2E76A7800A0}.Release|x64.ActiveCfg = Release|x64
+		{30C5F920-E0AA-37DA-7C4D-B2E76A7800A0}.Release|x64.Build.0 = Release|x64
+		{68190E7C-1341-AF9D-C893-3FB6295FB8FB}.Debug|x64.ActiveCfg = Debug|x64
+		{68190E7C-1341-AF9D-C893-3FB6295FB8FB}.Debug|x64.Build.0 = Debug|x64
+		{68190E7C-1341-AF9D-C893-3FB6295FB8FB}.Release|x64.ActiveCfg = Release|x64
+		{68190E7C-1341-AF9D-C893-3FB6295FB8FB}.Release|x64.Build.0 = Release|x64
+		{85A89DD8-D5E4-C6C0-557D-74C58DBD31ED}.Debug|x64.ActiveCfg = Debug|x64
+		{85A89DD8-D5E4-C6C0-557D-74C58DBD31ED}.Debug|x64.Build.0 = Debug|x64
+		{85A89DD8-D5E4-C6C0-557D-74C58DBD31ED}.Release|x64.ActiveCfg = Release|x64
+		{85A89DD8-D5E4-C6C0-557D-74C58DBD31ED}.Release|x64.Build.0 = Release|x64
+		{4EB2E32E-F9C7-C7C1-666B-1E7083EC81F1}.Debug|x64.ActiveCfg = Debug|x64
+		{4EB2E32E-F9C7-C7C1-666B-1E7083EC81F1}.Debug|x64.Build.0 = Debug|x64
+		{4EB2E32E-F9C7-C7C1-666B-1E7083EC81F1}.Release|x64.ActiveCfg = Release|x64
+		{4EB2E32E-F9C7-C7C1-666B-1E7083EC81F1}.Release|x64.Build.0 = Release|x64
+		{7AFB4EFE-15FB-CA8B-F3E8-915AC4727A06}.Debug|x64.ActiveCfg = Debug|x64
+		{7AFB4EFE-15FB-CA8B-F3E8-915AC4727A06}.Debug|x64.Build.0 = Debug|x64
+		{7AFB4EFE-15FB-CA8B-F3E8-915AC4727A06}.Release|x64.ActiveCfg = Release|x64
+		{7AFB4EFE-15FB-CA8B-F3E8-915AC4727A06}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

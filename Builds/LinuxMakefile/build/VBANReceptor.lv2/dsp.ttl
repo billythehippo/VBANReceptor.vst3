@@ -1,0 +1,425 @@
+@prefix atom:  <http://lv2plug.in/ns/ext/atom#> .
+@prefix bufs:  <http://lv2plug.in/ns/ext/buf-size#> .
+@prefix doap:  <http://usefulinc.com/ns/doap#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix lv2:   <http://lv2plug.in/ns/lv2core#> .
+@prefix midi:  <http://lv2plug.in/ns/ext/midi#> .
+@prefix opts:  <http://lv2plug.in/ns/ext/options#> .
+@prefix param: <http://lv2plug.in/ns/ext/parameters#> .
+@prefix patch: <http://lv2plug.in/ns/ext/patch#> .
+@prefix pg:    <http://lv2plug.in/ns/ext/port-groups#> .
+@prefix plug:  <https://www.github.com/billythehippo/VBANReceptor.vst3:> .
+@prefix pprop: <http://lv2plug.in/ns/ext/port-props#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rsz:   <http://lv2plug.in/ns/ext/resize-port#> .
+@prefix state: <http://lv2plug.in/ns/ext/state#> .
+@prefix time:  <http://lv2plug.in/ns/ext/time#> .
+@prefix ui:    <http://lv2plug.in/ns/extensions/ui#> .
+@prefix units: <http://lv2plug.in/ns/extensions/units#> .
+@prefix urid:  <http://lv2plug.in/ns/ext/urid#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+plug:onoff
+	a lv2:Parameter ;
+	rdfs:label "OnOff" ;
+	rdfs:range atom:Float ;
+	lv2:default 0 ;
+	lv2:minimum 0 ;
+	lv2:maximum 1	 ;
+	lv2:portProperty lv2:enumeration , lv2:toggled ;
+	lv2:scalePoint [
+		rdfs:label "Off" ;
+		rdf:value 0 ;
+	], [
+		rdfs:label "On" ;
+		rdf:value 1 ;
+	] .
+
+plug:gain
+	a lv2:Parameter ;
+	rdfs:label "Gain" ;
+	rdfs:range atom:Float ;
+	lv2:default 1 ;
+	lv2:minimum 0 ;
+	lv2:maximum 1 .
+
+plug:ip1
+	a lv2:Parameter ;
+	rdfs:label "IP1" ;
+	rdfs:range atom:Float ;
+	lv2:default 127 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:ip2
+	a lv2:Parameter ;
+	rdfs:label "IP2" ;
+	rdfs:range atom:Float ;
+	lv2:default 0 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:ip3
+	a lv2:Parameter ;
+	rdfs:label "IP3" ;
+	rdfs:range atom:Float ;
+	lv2:default 0 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:ip4
+	a lv2:Parameter ;
+	rdfs:label "IP4" ;
+	rdfs:range atom:Float ;
+	lv2:default 1 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:port4
+	a lv2:Parameter ;
+	rdfs:label "Port4" ;
+	rdfs:range atom:Float ;
+	lv2:default 0 ;
+	lv2:minimum 0 ;
+	lv2:maximum 9 .
+
+plug:port3
+	a lv2:Parameter ;
+	rdfs:label "Port3" ;
+	rdfs:range atom:Float ;
+	lv2:default 6 ;
+	lv2:minimum 0 ;
+	lv2:maximum 9 .
+
+plug:port2
+	a lv2:Parameter ;
+	rdfs:label "Port2" ;
+	rdfs:range atom:Float ;
+	lv2:default 9 ;
+	lv2:minimum 0 ;
+	lv2:maximum 9 .
+
+plug:port1
+	a lv2:Parameter ;
+	rdfs:label "Port1" ;
+	rdfs:range atom:Float ;
+	lv2:default 8 ;
+	lv2:minimum 0 ;
+	lv2:maximum 9 .
+
+plug:port0
+	a lv2:Parameter ;
+	rdfs:label "Port0" ;
+	rdfs:range atom:Float ;
+	lv2:default 0 ;
+	lv2:minimum 0 ;
+	lv2:maximum 9 .
+
+plug:streamname01
+	a lv2:Parameter ;
+	rdfs:label "Streamname01" ;
+	rdfs:range atom:Float ;
+	lv2:default 83 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:streamname02
+	a lv2:Parameter ;
+	rdfs:label "Streamname02" ;
+	rdfs:range atom:Float ;
+	lv2:default 116 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:streamname03
+	a lv2:Parameter ;
+	rdfs:label "Streamname03" ;
+	rdfs:range atom:Float ;
+	lv2:default 114 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:streamname04
+	a lv2:Parameter ;
+	rdfs:label "Streamname04" ;
+	rdfs:range atom:Float ;
+	lv2:default 101 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:streamname05
+	a lv2:Parameter ;
+	rdfs:label "Streamname05" ;
+	rdfs:range atom:Float ;
+	lv2:default 97 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:streamname06
+	a lv2:Parameter ;
+	rdfs:label "Streamname06" ;
+	rdfs:range atom:Float ;
+	lv2:default 109 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:streamname07
+	a lv2:Parameter ;
+	rdfs:label "Streamname07" ;
+	rdfs:range atom:Float ;
+	lv2:default 49 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:streamname08
+	a lv2:Parameter ;
+	rdfs:label "Streamname08" ;
+	rdfs:range atom:Float ;
+	lv2:default 0 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:streamname09
+	a lv2:Parameter ;
+	rdfs:label "Streamname09" ;
+	rdfs:range atom:Float ;
+	lv2:default 0 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:streamname10
+	a lv2:Parameter ;
+	rdfs:label "Streamname10" ;
+	rdfs:range atom:Float ;
+	lv2:default 0 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:streamname11
+	a lv2:Parameter ;
+	rdfs:label "Streamname11" ;
+	rdfs:range atom:Float ;
+	lv2:default 0 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:streamname12
+	a lv2:Parameter ;
+	rdfs:label "Streamname12" ;
+	rdfs:range atom:Float ;
+	lv2:default 0 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:streamname13
+	a lv2:Parameter ;
+	rdfs:label "Streamname13" ;
+	rdfs:range atom:Float ;
+	lv2:default 0 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:streamname14
+	a lv2:Parameter ;
+	rdfs:label "Streamname14" ;
+	rdfs:range atom:Float ;
+	lv2:default 0 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:streamname15
+	a lv2:Parameter ;
+	rdfs:label "Streamname15" ;
+	rdfs:range atom:Float ;
+	lv2:default 0 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:streamname16
+	a lv2:Parameter ;
+	rdfs:label "Streamname16" ;
+	rdfs:range atom:Float ;
+	lv2:default 0 ;
+	lv2:minimum 0 ;
+	lv2:maximum 255 .
+
+plug:redundancy
+	a lv2:Parameter ;
+	rdfs:label "Redundancy" ;
+	rdfs:range atom:Float ;
+	lv2:default 0 ;
+	lv2:minimum 0 ;
+	lv2:maximum 4 .
+
+plug:input_group_1
+	a pg:InputGroup ;
+	lv2:name "Input" ;
+	lv2:symbol "input_group_1" .
+
+plug:output_group_1
+	a pg:OutputGroup ;
+	lv2:name "Output" ;
+	lv2:symbol "output_group_1" .
+
+<https://www.github.com/billythehippo/VBANReceptor.vst3>
+	ui:ui <https://www.github.com/billythehippo/VBANReceptor.vst3:UI> ;
+	a lv2:Plugin ;
+	doap:name "VBANReceptor" ;
+	doap:description "VBANReceptor" ;
+	lv2:minorVersion 0 ;
+	lv2:microVersion 0 ;
+	doap:maintainer [
+		a foaf:Person ;
+		foaf:name "billy_the_hippo" ;
+		foaf:homepage <www.yourcompany.com> ;
+		foaf:mbox <> ;
+	] ;
+	doap:release [
+		a doap:Version ;
+		doap:revision "1.0.0" ;
+	] ;
+	lv2:optionalFeature
+		lv2:hardRTCapable ;
+	lv2:extensionData
+		state:interface ;
+	lv2:requiredFeature
+		urid:map ,
+		opts:options ,
+		bufs:boundedBlockLength ;
+	pg:mainInput plug:input_group_1 ;
+	pg:mainOutput plug:output_group_1 ;
+	patch:writable
+		plug:onoff ,
+		plug:gain ,
+		plug:ip1 ,
+		plug:ip2 ,
+		plug:ip3 ,
+		plug:ip4 ,
+		plug:port4 ,
+		plug:port3 ,
+		plug:port2 ,
+		plug:port1 ,
+		plug:port0 ,
+		plug:streamname01 ,
+		plug:streamname02 ,
+		plug:streamname03 ,
+		plug:streamname04 ,
+		plug:streamname05 ,
+		plug:streamname06 ,
+		plug:streamname07 ,
+		plug:streamname08 ,
+		plug:streamname09 ,
+		plug:streamname10 ,
+		plug:streamname11 ,
+		plug:streamname12 ,
+		plug:streamname13 ,
+		plug:streamname14 ,
+		plug:streamname15 ,
+		plug:streamname16 ,
+		plug:redundancy ;
+	patch:readable
+		plug:onoff ,
+		plug:gain ,
+		plug:ip1 ,
+		plug:ip2 ,
+		plug:ip3 ,
+		plug:ip4 ,
+		plug:port4 ,
+		plug:port3 ,
+		plug:port2 ,
+		plug:port1 ,
+		plug:port0 ,
+		plug:streamname01 ,
+		plug:streamname02 ,
+		plug:streamname03 ,
+		plug:streamname04 ,
+		plug:streamname05 ,
+		plug:streamname06 ,
+		plug:streamname07 ,
+		plug:streamname08 ,
+		plug:streamname09 ,
+		plug:streamname10 ,
+		plug:streamname11 ,
+		plug:streamname12 ,
+		plug:streamname13 ,
+		plug:streamname14 ,
+		plug:streamname15 ,
+		plug:streamname16 ,
+		plug:redundancy ;
+	lv2:port [
+		a lv2:InputPort , lv2:AudioPort ;
+		lv2:index 0 ;
+		lv2:symbol "audio_in_1" ;
+		lv2:name "Audio In 1" ;
+		pg:group plug:input_group_1 ;
+	] , [
+		a lv2:InputPort , lv2:AudioPort ;
+		lv2:index 1 ;
+		lv2:symbol "audio_in_2" ;
+		lv2:name "Audio In 2" ;
+		pg:group plug:input_group_1 ;
+	] , [
+		a lv2:OutputPort , lv2:AudioPort ;
+		lv2:index 2 ;
+		lv2:symbol "audio_out_1" ;
+		lv2:name "Audio Out 1" ;
+		pg:group plug:output_group_1 ;
+	] , [
+		a lv2:OutputPort , lv2:AudioPort ;
+		lv2:index 3 ;
+		lv2:symbol "audio_out_2" ;
+		lv2:name "Audio Out 2" ;
+		pg:group plug:output_group_1 ;
+	] , [
+		a lv2:InputPort , atom:AtomPort ;
+		rsz:minimumSize 10208 ;
+		atom:bufferType atom:Sequence ;
+		atom:supports
+			patch:Message ,
+			time:Position ;
+		lv2:designation lv2:control ;
+		lv2:index 4 ;
+		lv2:symbol "in" ;
+		lv2:name "In" ;
+	] , [
+		a lv2:OutputPort , atom:AtomPort ;
+		rsz:minimumSize 10208 ;
+		atom:bufferType atom:Sequence ;
+		atom:supports
+			patch:Message ;
+		lv2:designation lv2:control ;
+		lv2:index 5 ;
+		lv2:symbol "out" ;
+		lv2:name "Out" ;
+	] , [
+		a lv2:OutputPort , lv2:ControlPort ;
+		lv2:designation lv2:latency ;
+		lv2:symbol "latency" ;
+		lv2:name "Latency" ;
+		lv2:index 6 ;
+		lv2:portProperty lv2:reportsLatency , lv2:integer , lv2:connectionOptional , pprop:notOnGUI ;
+		units:unit units:frame ;
+	] , [
+		a lv2:InputPort , lv2:ControlPort ;
+		lv2:designation lv2:freeWheeling ;
+		lv2:symbol "freeWheeling" ;
+		lv2:name "Free Wheeling" ;
+		lv2:default 0.0 ;
+		lv2:minimum 0.0 ;
+		lv2:maximum 1.0 ;
+		lv2:index 7 ;
+		lv2:portProperty lv2:toggled , lv2:connectionOptional , pprop:notOnGUI ;
+	] , [
+		a lv2:InputPort , lv2:ControlPort ;
+		lv2:designation lv2:enabled ;
+		lv2:symbol "enabled" ;
+		lv2:name "Enabled" ;
+		lv2:default 1.0 ;
+		lv2:minimum 0.0 ;
+		lv2:maximum 1.0 ;
+		lv2:index 8 ;
+		lv2:portProperty lv2:toggled , lv2:connectionOptional , pprop:notOnGUI ;
+	] ;
+	opts:supportedOption
+		bufs:maxBlockLength .
