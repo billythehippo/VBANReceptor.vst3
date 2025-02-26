@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="fvbCYe" name="VBANReceptor" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
+              pluginFormats="buildAU,buildAUv3,buildLV2,buildStandalone,buildVST3"
+              pluginManufacturer="billy_the_hippo" pluginVST3Category="Network,Tools"
+              lv2Uri="https://www.github.com/billythehippo/VBANReceptor.vst3">
+  <MAINGROUP id="kd8SGq" name="VBANReceptor">
+    <GROUP id="{A1E10324-E3D2-F2DA-5EC6-110A600FB351}" name="Source">
+      <FILE id="JAK5nU" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="JQB6tT" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="rP4mbZ" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="AshwEE" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <ANDROIDSTUDIO targetFolder="Builds/Android">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="VBANReceptor"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="VBANReceptor"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../../usr/share/juce/modules"/>
+      </MODULEPATHS>
+    </ANDROIDSTUDIO>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="VBANReceptor"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="VBANReceptor"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../../usr/share/juce/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+    <VS2017 targetFolder="Builds/VisualStudio2017">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="VBANReceptor"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="VBANReceptor"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../../usr/share/juce/modules"/>
+      </MODULEPATHS>
+    </VS2017>
+    <XCODE_IPHONE targetFolder="Builds/iOS">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="VBANReceptor"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="VBANReceptor"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../../usr/share/juce/modules"/>
+      </MODULEPATHS>
+    </XCODE_IPHONE>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="VBANReceptor"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="VBANReceptor"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../../usr/share/juce/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../../usr/share/juce/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+  </EXPORTFORMATS>
+</JUCERPROJECT>
