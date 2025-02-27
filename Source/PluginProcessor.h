@@ -11,6 +11,8 @@
 #include <JuceHeader.h>
 #include "vban_functions.h"
 
+extern std::mutex rbmutex;
+
 //==============================================================================
 
 class PlugThread : public juce::Thread
@@ -35,7 +37,7 @@ public:
       }
   }
 
-  bool start(char* ip, int* port, char* sn, long sr, int nfr, int nbc, int red)
+  bool start(char* ip, int* port, char* sn, long* sr, int* nfr, int nbc, int red)
   {
     ipAddr = ip;
     streamname = sn;
@@ -43,7 +45,7 @@ public:
     nframes = nfr;
     sampleRate = sr;
     redundancy = red;
-    vbanFormatSR = vban_get_format_SR(sampleRate);
+    vbanFormatSR = vban_get_format_SR(*sampleRate);
     //rxsocket = new juce::DatagramSocket;
     rxsocket.reset(new juce::DatagramSocket);
     if (rxsocket->bindToPort(*port))
@@ -75,116 +77,125 @@ protected:
     int writecnt;
 
     fprintf(stderr, "RX thread started...\r\n");
-
+    rbmutex.unlock();
     while (!threadShouldExit())
     {
-      while (rxsocket->waitUntilReady(true, 0))
-      {
-        memset(&rxPacket, 0, VBAN_PROTOCOL_MAX_SIZE);
-        pktlen = rxsocket->read(&rxPacket, VBAN_PROTOCOL_MAX_SIZE, false, senderIPAddress, senderPortNumber);
-        if ((pktlen>VBAN_HEADER_SIZE)&&(rxPacket.header.vban==VBAN_HEADER_FOURC))
+        while (rxsocket->waitUntilReady(true, 0))
         {
-          switch (rxPacket.header.format_SR&VBAN_PROTOCOL_MASK)
+          memset(&rxPacket, 0, VBAN_PROTOCOL_MAX_SIZE);
+          pktlen = rxsocket->read(&rxPacket, VBAN_PROTOCOL_MAX_SIZE, false, senderIPAddress, senderPortNumber);
+          if ((pktlen>VBAN_HEADER_SIZE)&&(rxPacket.header.vban==VBAN_HEADER_FOURC))
           {
-            case VBAN_PROTOCOL_AUDIO:
-              // AUDIO
-              if ((streamname[0]==0)||(ipAddr[0]=='0')||(ipAddr[0]==0)) // No stream receiving
+              switch (rxPacket.header.format_SR&VBAN_PROTOCOL_MASK)
               {
-                  if ((ipAddr[0]=='0')||(ipAddr[0]==0))  // no IP setted
+              case VBAN_PROTOCOL_AUDIO:
+                  // AUDIO
+                  if ((streamname[0]==0)||(ipAddr[0]=='0')||(ipAddr[0]==0)) // No stream receiving
                   {
-                      strncpy(ipAddr, senderIPAddress.toRawUTF8(), strlen(senderIPAddress.toRawUTF8()));
-                      fprintf(stderr, "RX ip %s\r\n", ipAddr);
-                      //refreshIPAddressParametersFromText(ipAddr);
-                  }
-                  if (streamname[0]==0)  //no SN setted
-                  {
-                      memcpy(streamname, rxPacket.header.streamname, 16);
-                      fprintf(stderr, "SN ip %s\r\n", streamname);
-                  }
-                  //fprintf(stderr, "%s %s\r\n%s %s\r\n%d %d\r\n%d %d\r\n\r\n", rxPacket.header.streamname, streamname, ipAddr, senderIPAddress.toRawUTF8(), rxPacket.header.format_SR, vbanFormatSR, rxPacket.header.nuFrame, nuFrame);
-                  /*// TODO: Rework for Resampler //*/
-              }
-              if ((memcmp(rxPacket.header.streamname, streamname, strlen(rxPacket.header.streamname))==0)&&
-                  (memcmp(ipAddr, senderIPAddress.toRawUTF8(), strlen(senderIPAddress.toRawUTF8()))==0)&&
-                  (rxPacket.header.nuFrame!= nuFrame)&&
-                  ((rxPacket.header.format_SR&VBAN_SR_MASK)==vbanFormatSR))
-              {
-                  //fprintf(stderr, "%d bytes received\r\n", pktlen);
-                  nuFrame = rxPacket.header.nuFrame;
-                  if (ringbuffer==NULL) // still no stream receiving
-                  {
-                      if (framebuf!= nullptr) free(framebuf);
-                      framebuf = (float*)malloc(nbchannels*sizeof(float));
-                      fprintf(stderr, "Creating ringbuffer... %d\r\n", redundancy);
-                      rblen = 2 * nbchannels * sizeof(float) * (1 + redundancy) * (rxPacket.header.format_nbs + 1 > nframes ? rxPacket.header.format_nbs + 1 : nframes);
-                      ringbuffer = ringbuffer_create(rblen);
-                  }
-                  else
-                  {
-                      packetFrameSize = ((rxPacket.header.format_nbc + 1)*VBanBitResolutionSize[rxPacket.header.format_bit]);
-                      int nbc = (nbchannels < (rxPacket.header.format_nbc + 1) ? nbchannels : rxPacket.header.format_nbc + 1);
-                      //fprintf(stderr, "%u %u %u %u %u space\r\n", rblen, ringbuffer->size, ringbuffer_write_space(ringbuffer), packetFrameSize, nbchannels);
-                      writecnt = 0;
-                      for (int frame = 0; frame <= (rxPacket.header.format_nbs); frame++)
+                      if ((ipAddr[0]=='0')||(ipAddr[0]==0))  // no IP setted
                       {
-                          vban_sample_convert(framebuf, VBAN_BITFMT_32_FLOAT, &rxPacket.data[frame*packetFrameSize], rxPacket.header.format_bit, nbchannels);
-                          if (ringbuffer_write_space(ringbuffer) >= (nbchannels*sizeof(float)))
-                          {
-                              ringbuffer_write(ringbuffer, (char*)framebuf, nbc*sizeof(float));
-                              writecnt++;
-                              //fprintf(stderr, "%d bytes received\r\n", pktlen);
-                          }
+                          strncpy(ipAddr, senderIPAddress.toRawUTF8(), strlen(senderIPAddress.toRawUTF8()));
+                          fprintf(stderr, "RX ip %s\r\n", ipAddr);
+                          //refreshIPAddressParametersFromText(ipAddr);
                       }
-                    //fprintf(stderr, "%d frames written\r\n", writecnt);
+                      if (streamname[0]==0)  //no SN setted
+                      {
+                          memcpy(streamname, rxPacket.header.streamname, 16);
+                          fprintf(stderr, "SN ip %s\r\n", streamname);
+                      }
+                      //fprintf(stderr, "%s %s\r\n%s %s\r\n%d %d\r\n%d %d\r\n\r\n", rxPacket.header.streamname, streamname, ipAddr, senderIPAddress.toRawUTF8(), rxPacket.header.format_SR, vbanFormatSR, rxPacket.header.nuFrame, Frame);
+                      /*// TODO: Rework for Resampler //*/
                   }
-              }
-              // TODO AUDIO
-              break;
-            case VBAN_PROTOCOL_SERIAL:
-              // MIDI
-              // TODO MIDI
-              break;
-            case VBAN_PROTOCOL_TXT:
-              // TEXT
-              // TODO TEXT
-              break;
-            case VBAN_PROTOCOL_USER:
-              // RAW or other
-              break;
-            default:
-              // non matching packets etc.
-              break;
-          }
+                  if ((memcmp(rxPacket.header.streamname, streamname, strlen(rxPacket.header.streamname))==0)&&
+                      (memcmp(ipAddr, senderIPAddress.toRawUTF8(), strlen(senderIPAddress.toRawUTF8()))==0)&&
+                      (rxPacket.header.nuFrame!= nuFrame)&&
+                      ((rxPacket.header.format_SR&VBAN_SR_MASK)==vbanFormatSR))
+                  {
+                      //fprintf(stderr, "%d bytes received\r\n", pktlen);
+                      nuFrame = rxPacket.header.nuFrame;
+                      if (ringbuffer==nullptr) // still no stream receiving
+                      {
+                          if (framebuf!= nullptr) free(framebuf);
+                          framebuf = (float*)malloc(nbchannels*sizeof(float));
+                          fprintf(stderr, "Creating ringbuffer... %d\r\n", redundancy);
+                          rblen = 2 * nbchannels * sizeof(float) * (1 + redundancy) * (rxPacket.header.format_nbs + 1 > *nframes ? rxPacket.header.format_nbs + 1 : *nframes);
+                          ringbuffer = ringbuffer_create(rblen);
+                      }
+                      else
+                      {
+                          packetFrameSize = ((rxPacket.header.format_nbc + 1)*VBanBitResolutionSize[rxPacket.header.format_bit]);
+                          int nbc = (nbchannels < (rxPacket.header.format_nbc + 1) ? nbchannels : rxPacket.header.format_nbc + 1);
+                          //fprintf(stderr, "%u %u %u %u %u space\r\n", rblen, ringbuffer->size, ringbuffer_write_space(ringbuffer), packetFrameSize, nbchannels);
+                          writecnt = 0;
+                          for (int frame = 0; frame <= (rxPacket.header.format_nbs); frame++)
+                          {
+                              vban_sample_convert(framebuf, VBAN_BITFMT_32_FLOAT, &rxPacket.data[frame*packetFrameSize], rxPacket.header.format_bit, nbchannels);
+                              rbmutex.lock();
+                              if (ringbuffer_write_space(ringbuffer) >= (nbchannels*sizeof(float)))
+                              {
+                                  ringbuffer_write(ringbuffer, (char*)framebuf, nbc*sizeof(float));
+                                  writecnt++;
+                                  //fprintf(stderr, "%d bytes received\r\n", pktlen);
+                              }
+                              rbmutex.unlock();
+                          }
+                        //fprintf(stderr, "%d frames written\r\n", writecnt);
+                      }
+                  }
+                    // TODO AUDIO
+                  break;
+                  case VBAN_PROTOCOL_SERIAL:
+                    // MIDI
+                    // TODO MIDI
+                  break;
+                  case VBAN_PROTOCOL_TXT:
+                      // TEXT
+                      fprintf(stderr, "Info request from %s:%d\n", senderIPAddress.toRawUTF8(), senderPortNumber);
+                      if ((memcmp(rxPacket.header.streamname, "INFO", 4)==0)&&((memcmp(rxPacket.data, "/info", 5)==0)||(memcmp(rxPacket.data, "/INFO", 5)==0)))
+                      {
+                          memset(&infopacket, 0, VBAN_PROTOCOL_MAX_SIZE);
+                          infopacket.header.vban = VBAN_HEADER_FOURC;
+                          infopacket.header.format_SR = VBAN_PROTOCOL_TXT;
+                          strcpy(infopacket.header.streamname, "INFO");
+                          sprintf(infopacket.data, "VST3_Receptor streamname=%s nboutputs=%d", streamname, nbchannels);
+                          rxsocket->write(senderIPAddress, senderPortNumber, &infopacket, VBAN_HEADER_SIZE + strlen(infopacket.data));
+                      }
+                  break;
+                  case VBAN_PROTOCOL_USER:
+                    // RAW or other
+                  break;
+                  default:
+                    // non matching packets etc.
+                  break;
+                }
+            }
         }
-      }
     }
-    //if (plugin_rx_context.framebuf!= nullptr) free(plugin_rx_context.framebuf);
     rxsocket->shutdown();
-    if (framebuf!= NULL) free(framebuf);
-    if (ringbuffer!= NULL) clearRingBuffer();
+    if (framebuf!= nullptr) free(framebuf);
+    if (ringbuffer!= nullptr) clearRingBuffer();
     if (rxsocket!= nullptr)
     {
-      //delete (rxsocket);
       rxsocket = nullptr;
+      fprintf(stderr, "RX thread stopped...\r\n");
     }
-    fprintf(stderr, "RX thread stopped...\r\n");
   }
 
 private:
 
   VBanPacket rxPacket;
   int packetFrameSize;
-  ringbuffer_t* ringbuffer;
+  ringbuffer_t* ringbuffer = nullptr;
   int rblen = 0;
   char* ipAddr;
   char* streamname;
-  long sampleRate;
-  uint8_t vbanFormatSR = 4;
+  long* sampleRate;
   int nbchannels;
-  int nframes;
+  uint8_t vbanFormatSR;
+  int* nframes;
   int redundancy = 0;
   int nuFrame = 0;
-  float* framebuf = NULL;
+  float* framebuf = nullptr;
   //juce::DatagramSocket* rxsocket;
   std::unique_ptr<juce::DatagramSocket>rxsocket;
 
@@ -193,7 +204,7 @@ private:
   }
 };
 /**
-*/
+ */
 class VBANReceptorAudioProcessor  : public juce::AudioProcessor
 {
 public:
@@ -265,8 +276,9 @@ private:
     int lostFrames = 0;
     int lostSamples = 0;
     int bufReadSpace = 0;
-    float pluckingEnabled = true;
-    float pluckingOn = false;
+    float gain;
+    bool pluckingEnabled = true;
+    bool pluckingOn = false;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VBANReceptorAudioProcessor)
 };

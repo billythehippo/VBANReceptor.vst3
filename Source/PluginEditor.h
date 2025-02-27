@@ -41,6 +41,7 @@ private:
     juce::ComboBox comboBoxReceptors;
     juce::TextButton textButtonScan;
     juce::TextButton textButtonGo;
+    juce::ToggleButton pluckingOnOff{"Plucking"};
 
     juce::Slider gainSlider;
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> gainSliderAttachment;

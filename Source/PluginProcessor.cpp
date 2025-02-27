@@ -12,6 +12,8 @@
 int nbinputs = 2;
 int nboutputs = 2;
 
+std::mutex rbmutex;
+
 //==============================================================================
 VBANReceptorAudioProcessor::VBANReceptorAudioProcessor()
 
@@ -49,7 +51,8 @@ VBANReceptorAudioProcessor::VBANReceptorAudioProcessor()
                 std::make_unique<juce::AudioParameterInt>(juce::ParameterID("streamname14", 1), "Streamname14", 0, 255, 0),
                 std::make_unique<juce::AudioParameterInt>(juce::ParameterID("streamname15", 1), "Streamname15", 0, 255, 0),
                 std::make_unique<juce::AudioParameterInt>(juce::ParameterID("streamname16", 1), "Streamname16", 0, 255, 0),
-                std::make_unique<juce::AudioParameterInt>(juce::ParameterID("redundancy", 1), "Redundancy", 0, 4, 0)
+                std::make_unique<juce::AudioParameterInt>(juce::ParameterID("redundancy", 1), "Redundancy", 0, 4, 0),
+                std::make_unique<juce::AudioParameterBool>(juce::ParameterID("plucking", 1), "Plucking", true)
            })
 {
 }
@@ -205,6 +208,8 @@ void VBANReceptorAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
         // TODO: say thread to recalculate ringbuffer
     }
 
+    gain = parameters.getRawParameterValue("gain")->load();
+    pluckingEnabled = parameters.getRawParameterValue("plucking");
     redundancy = parameters.getRawParameterValue("redundancy")->load();
     onoff = parameters.getRawParameterValue("onoff")->load();
     if ((onoffCurrent==false)&&(onoff==true)) // switching on
@@ -214,7 +219,7 @@ void VBANReceptorAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
         //rxThread = new PlugThread("VBAN RX thread"); //
         //(char* ip, uint16_t* port, char* sn, long sr, int nfr, int nbc)
         rxThread.reset(new PlugThread("VBAN RX thread"));
-        rxThread->start(ipAddr, &udpPort, streamname, hostSamplerate, nframes, totalNumInputChannels, redundancy);
+        rxThread->start(ipAddr, &udpPort, streamname, &hostSamplerate, &nframes, (int)totalNumOutputChannels, redundancy);
     }
     if ((onoffCurrent==true)&&(onoff==false)) // switching off
     {
@@ -239,9 +244,10 @@ void VBANReceptorAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
 
     if (onoff==true)
     {
-        if (ringbuffer!=NULL)
+        if (ringbuffer!=nullptr)
         {
             lostFrames = 0;
+            rbmutex.lock();
             bufReadSpace = ringbuffer_read_space(ringbuffer);
             //fprintf(stderr, "Readspace %d\r\n", bufReadSpace);
             if (pluckingEnabled)
@@ -249,26 +255,43 @@ void VBANReceptorAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
                 if (bufReadSpace>(ringbuffer->size*3/4)) pluckingOn = true;
                 else if (bufReadSpace<(ringbuffer->size*1/2)) pluckingOn = false;
             }
+            else pluckingOn = false;
+            rbmutex.unlock();
             for (frame = 0; frame < numSamples; frame++)
             {
                 lostSamples = 0;
-                if (ringbuffer_read_space(ringbuffer)>= totalNumOutputChannels*sizeof(float))
+                rbmutex.lock();
+                bufReadSpace = ringbuffer_read_space(ringbuffer);
+                rbmutex.unlock();
+                if (bufReadSpace>= totalNumOutputChannels*sizeof(float))
                     for (channel = 0; channel < totalNumOutputChannels; channel++)
                     {
+                        rbmutex.lock();
                         if (vban_read_frame_from_ringbuffer(&outputChannelData[channel][frame], ringbuffer, 1))
                         {
                             lostSamples++;
                             pluckingOn = false;
                         }
+                        rbmutex.unlock();
                     }
                     if (lostSamples > 0) lostFrames++;
                     if ((frame == (numSamples - 1))&&(pluckingEnabled==true))
                     {
-                        if (ringbuffer_read_space(ringbuffer)>= totalNumOutputChannels*sizeof(float))
+                        rbmutex.lock();
+                        bufReadSpace = ringbuffer_read_space(ringbuffer);
+                        rbmutex.unlock();
+                        if (bufReadSpace>= totalNumOutputChannels*sizeof(float))
                             for (channel = 0; channel < totalNumOutputChannels; channel++)
+                            {
+                                rbmutex.lock();
                                 vban_add_frame_from_ringbuffer(&outputChannelData[channel][frame], ringbuffer, 1);
+                                rbmutex.unlock();
+                            }
                     }
             }
+            for (channel = 0; channel < totalNumOutputChannels; channel++)
+                for (frame=0; frame < numSamples; frame++)
+                    outputChannelData[channel][frame]*= gain;
             if (lostFrames)
             {
                 if (lostPackets<9) fprintf(stderr, "%d samples lost\n", lostPackets);
@@ -287,7 +310,9 @@ void VBANReceptorAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
         }
         else
         {
+            rbmutex.lock();
             ringbuffer = rxThread->getRingBufferPointer();
+            rbmutex.unlock();
             for (frame=0; frame < numSamples; frame++)
                 for (channel = 0; channel < totalNumOutputChannels; channel++)
                     outputChannelData[channel][frame] = 0;

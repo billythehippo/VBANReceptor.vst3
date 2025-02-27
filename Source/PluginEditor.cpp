@@ -146,6 +146,22 @@ VBANReceptorAudioProcessorEditor::VBANReceptorAudioProcessorEditor (VBANReceptor
       }
     }
   };
+  addAndMakeVisible (pluckingOnOff);
+  pluckingOnOff.setBounds (24, 152, 70, 24);
+  if (audioProcessor.parameters.getRawParameterValue("plucking")->load()) pluckingOnOff.setToggleState(true, juce::dontSendNotification);
+  else pluckingOnOff.setToggleState(false, juce::dontSendNotification);
+  pluckingOnOff.onClick = [this]()
+  {
+    if (pluckingOnOff.getToggleState())
+    {
+      audioProcessor.parameters.getParameter("plucking")->setValueNotifyingHost(1);
+    }
+    else
+    {
+      audioProcessor.parameters.getParameter("plucking")->setValueNotifyingHost(0);
+    }
+  };
+  //audioProcessor.parameters.addParameterListener("plucking", this);
 
   gainSlider.setSliderStyle(juce::Slider::LinearVertical);
   gainSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 50, 20);
