@@ -33,6 +33,7 @@ private:
     juce::Label labelSN;
     juce::Label labelRed;
     juce::Label labelFmt;
+    juce::Label labelChannels;
     juce::TextEditor textEditorIP;
     juce::TextEditor textEditorPort;
     juce::TextEditor textEditorSN;

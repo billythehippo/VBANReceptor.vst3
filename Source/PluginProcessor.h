@@ -12,6 +12,9 @@
 #include "vban_functions.h"
 
 extern std::mutex rbmutex;
+extern int nbinputs;
+extern int nboutputs;
+
 
 //==============================================================================
 
@@ -77,7 +80,6 @@ protected:
     int writecnt;
 
     fprintf(stderr, "RX thread started...\r\n");
-    rbmutex.unlock();
     while (!threadShouldExit())
     {
         while (rxsocket->waitUntilReady(true, 0))
@@ -120,6 +122,20 @@ protected:
                           fprintf(stderr, "Creating ringbuffer... %d\r\n", redundancy);
                           rblen = 2 * nbchannels * sizeof(float) * (1 + redundancy) * (rxPacket.header.format_nbs + 1 > *nframes ? rxPacket.header.format_nbs + 1 : *nframes);
                           ringbuffer = ringbuffer_create(rblen);
+                          memset(ringbuffer->buf, 0, rblen);
+                          switch (redundancy)
+                          {
+                            case 0:
+                              break;
+                            case 1:
+                              ringbuffer_write_advance(ringbuffer, rblen/4);
+                              ringbuffer_read_advance(ringbuffer, rblen/4);
+                              break;
+                            default:
+                              ringbuffer_write_advance(ringbuffer, rblen/2);
+                              ringbuffer_read_advance(ringbuffer, rblen/2);
+                              break;
+                          }
                       }
                       else
                       {

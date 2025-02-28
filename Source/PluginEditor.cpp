@@ -34,6 +34,15 @@ VBANReceptorAudioProcessorEditor::VBANReceptorAudioProcessorEditor (VBANReceptor
   addAndMakeVisible (labelRed);
   labelRed.setBounds (16, 112, 70, 24);
 
+  char channelsnum[12] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+  if (nboutputs==1) sprintf(channelsnum, "1 channel");
+  else sprintf(channelsnum, "%d channels", nboutputs);
+  fprintf(stderr, "%s\r\n", channelsnum);
+  labelChannels.setText(channelsnum, juce::dontSendNotification);
+  labelChannels.setJustificationType (36);
+  addAndMakeVisible (labelChannels);
+  labelChannels.setBounds (120, 184, 80, 24);
+
   addAndMakeVisible (textEditorIP); //refreshIPAddressTextFromParameters(ipAddr);
   audioProcessor.refreshIPAddressTextFromParameters(IPAddr);
   textEditorIP.setText (TRANS (IPAddr));
@@ -167,6 +176,7 @@ VBANReceptorAudioProcessorEditor::VBANReceptorAudioProcessorEditor (VBANReceptor
   gainSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 50, 20);
   addAndMakeVisible(gainSlider);
   gainSlider.setBounds (240, 16, 70, 158);
+  gainSlider.setSkewFactor(0.005);
   gainSliderAttachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.parameters, "gain", gainSlider);
 
   setSize (320, 210);//(240, 260);

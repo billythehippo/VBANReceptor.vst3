@@ -262,32 +262,26 @@ void VBANReceptorAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
                 lostSamples = 0;
                 rbmutex.lock();
                 bufReadSpace = ringbuffer_read_space(ringbuffer);
-                rbmutex.unlock();
                 if (bufReadSpace>= totalNumOutputChannels*sizeof(float))
+                {
                     for (channel = 0; channel < totalNumOutputChannels; channel++)
                     {
-                        rbmutex.lock();
                         if (vban_read_frame_from_ringbuffer(&outputChannelData[channel][frame], ringbuffer, 1))
                         {
                             lostSamples++;
                             pluckingOn = false;
                         }
-                        rbmutex.unlock();
                     }
                     if (lostSamples > 0) lostFrames++;
                     if ((frame == (numSamples - 1))&&(pluckingEnabled==true))
                     {
-                        rbmutex.lock();
                         bufReadSpace = ringbuffer_read_space(ringbuffer);
-                        rbmutex.unlock();
                         if (bufReadSpace>= totalNumOutputChannels*sizeof(float))
                             for (channel = 0; channel < totalNumOutputChannels; channel++)
-                            {
-                                rbmutex.lock();
                                 vban_add_frame_from_ringbuffer(&outputChannelData[channel][frame], ringbuffer, 1);
-                                rbmutex.unlock();
-                            }
                     }
+                }
+                rbmutex.unlock();
             }
             for (channel = 0; channel < totalNumOutputChannels; channel++)
                 for (frame=0; frame < numSamples; frame++)
