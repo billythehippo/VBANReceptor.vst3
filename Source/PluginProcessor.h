@@ -12,9 +12,10 @@
 #include "vban_functions.h"
 
 extern std::mutex rbmutex;
-extern int nbinputs;
-extern int nboutputs;
-
+//extern int nbinputs;
+//extern int nboutputs;
+#define nbinputs 2
+#define nboutputs 2
 
 //==============================================================================
 
@@ -33,10 +34,10 @@ public:
 
   void clearRingBuffer()
   {
-      if (ringbuffer!= NULL)
+      if (ringbuffer!= nullptr)
       {
           ringbuffer_free(ringbuffer);
-          ringbuffer = NULL;
+          if (ringbuffer!= nullptr) ringbuffer = nullptr;
       }
   }
 
@@ -276,8 +277,8 @@ private:
     //==============================================================================
     //PlugThread* rxThread;
     std::unique_ptr<PlugThread>(rxThread);
-    const float** inputChannelData;
-    float** outputChannelData;
+    float* inputChannelData[nbinputs];
+    float* outputChannelData[nboutputs];
     ringbuffer_t* ringbuffer = NULL;
     bool onoff = false;
     bool onoffCurrent = false;

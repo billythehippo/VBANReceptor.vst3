@@ -9,8 +9,8 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
-int nbinputs = 2;
-int nboutputs = 2;
+//int nbinputs = 2;
+//int nboutputs = 2;
 
 std::mutex rbmutex;
 
@@ -136,15 +136,17 @@ void VBANReceptorAudioProcessor::changeProgramName (int index, const juce::Strin
 //==============================================================================
 void VBANReceptorAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    inputChannelData = (const float**)malloc(nbinputs*sizeof(float*));
-    outputChannelData = (float**)malloc(nboutputs*sizeof(float*));
+    //inputChannelData = (const float**)malloc(nbinputs*sizeof(float*));
+    //outputChannelData = (float**)malloc(nboutputs*sizeof(float*));
 }
 
 void VBANReceptorAudioProcessor::releaseResources()
 {
     parameters.getParameter("onoff")->setValueNotifyingHost(0.0);
-    if (inputChannelData!=nullptr) free(inputChannelData);
-    if (outputChannelData!=nullptr) free(outputChannelData);
+    //if (inputChannelData!=nullptr) free(inputChannelData);
+    //if (outputChannelData!=nullptr) free(outputChannelData);
+    for (int i=0; i<nbinputs; i++) inputChannelData[i] = nullptr;
+    for (int i=0; i<nboutputs; i++) outputChannelData[i] = nullptr;
 
     if (rxThread!= nullptr)
     {
@@ -238,7 +240,7 @@ void VBANReceptorAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
 
     for (channel = 0; channel < totalNumInputChannels; ++channel)
     {
-        inputChannelData[channel] = buffer.getReadPointer(channel);
+        inputChannelData[channel] = (float*)buffer.getReadPointer(channel);
         outputChannelData[channel] = buffer.getWritePointer(channel);
     }
 
@@ -314,7 +316,7 @@ void VBANReceptorAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
     }
     else
     {
-        ringbuffer = NULL;
+        ringbuffer = nullptr;
         for (frame=0; frame < numSamples; frame++)
             for (channel = 0; channel < totalNumOutputChannels; channel++)
                 outputChannelData[channel][frame] = 0;
