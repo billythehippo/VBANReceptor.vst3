@@ -13,6 +13,7 @@
 VBANReceptorAudioProcessorEditor::VBANReceptorAudioProcessorEditor (VBANReceptorAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p)
 {
+  audioProcessor.editor = this;
   char IPAddr[16] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
   char udpPortTxt[5] = {0, 0, 0, 0, 0};
   int udpPort;
@@ -50,14 +51,14 @@ VBANReceptorAudioProcessorEditor::VBANReceptorAudioProcessorEditor (VBANReceptor
   textEditorIP.onTextChange = [this]()
   {
     bool onoffState = audioProcessor.parameters.getRawParameterValue("onoff")->load();
-    if (onoffState==false)
+    if ((onoffState==false)||(gettingParametersFromProcessor==true))
     {
       audioProcessor.refreshIPAddressParametersFromText((char*)textEditorIP.getText().toRawUTF8());
     }
     else
     {
       audioProcessor.refreshIPAddressTextFromParameters((char*)textEditorIP.getText().toRawUTF8());
-      juce::AlertWindow::showMessageBoxAsync(juce::AlertWindow::WarningIcon, "Warning", "Unable to change IP address while running!", "OK");
+      //juce::AlertWindow::showMessageBoxAsync(juce::AlertWindow::WarningIcon, "Warning", "Unable to change IP address while running!", "OK");
     }
   };
 
@@ -76,7 +77,7 @@ VBANReceptorAudioProcessorEditor::VBANReceptorAudioProcessorEditor (VBANReceptor
     else
     {
       udpPort = audioProcessor.refreshPortTextFromParameters((char*)textEditorPort.getText().toRawUTF8());
-      juce::AlertWindow::showMessageBoxAsync(juce::AlertWindow::WarningIcon, "Warning", "Unable to change UDP port while running!", "OK");
+      //juce::AlertWindow::showMessageBoxAsync(juce::AlertWindow::WarningIcon, "Warning", "Unable to change UDP port while running!", "OK");
     }
   };
 
@@ -95,14 +96,14 @@ VBANReceptorAudioProcessorEditor::VBANReceptorAudioProcessorEditor (VBANReceptor
   textEditorSN.onTextChange = [this]()
   {
     bool onoffState = audioProcessor.parameters.getRawParameterValue("onoff")->load();
-    if (onoffState==false)
+    if ((onoffState==false)||(gettingParametersFromProcessor==true))
     {
       audioProcessor.refreshStreamNameParametersFromText((char*)textEditorSN.getText().toRawUTF8(), strlen(textEditorSN.getText().toRawUTF8()));
     }
     else
     {
       audioProcessor.refreshStreamNameTextFromParameters((char*)textEditorSN.getText().toRawUTF8(), strlen(textEditorSN.getText().toRawUTF8()));
-      juce::AlertWindow::showMessageBoxAsync(juce::AlertWindow::WarningIcon, "Warning", "Unable to change Streamname while running!", "OK");
+      //juce::AlertWindow::showMessageBoxAsync(juce::AlertWindow::WarningIcon, "Warning", "Unable to change Streamname while running!", "OK");
     }
   };
 

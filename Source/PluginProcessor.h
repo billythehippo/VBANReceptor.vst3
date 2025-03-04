@@ -17,6 +17,8 @@ extern std::mutex rbmutex;
 #define nbinputs 2
 #define nboutputs 2
 
+
+class VBANReceptorAudioProcessorEditor;
 //==============================================================================
 
 class PlugThread : public juce::Thread
@@ -263,6 +265,7 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
 
     //==============================================================================
+
     int refreshStreamNameTextFromParameters(char* text, int textlen);
     void refreshStreamNameParametersFromText(const char* text, int textlen);
     int refreshIPAddressTextFromParameters(char* text);
@@ -272,10 +275,11 @@ public:
 
     juce::AudioProcessorValueTreeState parameters;
     bool cleanup = false;
+    VBANReceptorAudioProcessorEditor* editor;
 
 private:
     //==============================================================================
-    //PlugThread* rxThread;
+
     std::unique_ptr<PlugThread>(rxThread);
     float* inputChannelData[nbinputs];
     float* outputChannelData[nboutputs];

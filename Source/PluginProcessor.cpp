@@ -51,7 +51,7 @@ VBANReceptorAudioProcessor::VBANReceptorAudioProcessor()
                 std::make_unique<juce::AudioParameterInt>(juce::ParameterID("streamname14", 1), "Streamname14", 0, 255, 0),
                 std::make_unique<juce::AudioParameterInt>(juce::ParameterID("streamname15", 1), "Streamname15", 0, 255, 0),
                 std::make_unique<juce::AudioParameterInt>(juce::ParameterID("streamname16", 1), "Streamname16", 0, 255, 0),
-                std::make_unique<juce::AudioParameterInt>(juce::ParameterID("redundancy", 1), "Redundancy", 0, 4, 0),
+                std::make_unique<juce::AudioParameterInt>(juce::ParameterID("redundancy", 1), "Redundancy", 0, 4, 1),
                 std::make_unique<juce::AudioParameterBool>(juce::ParameterID("plucking", 1), "Plucking", true)
            })
 {
@@ -60,15 +60,6 @@ VBANReceptorAudioProcessor::VBANReceptorAudioProcessor()
 VBANReceptorAudioProcessor::~VBANReceptorAudioProcessor()
 {
     parameters.getParameter("onoff")->setValueNotifyingHost(0.0);
-    /*if (rxThread!= nullptr)
-    {
-        fprintf(stderr, "Destructor: Stopping rxThread\r\n");
-        if (rxThread->isThreadRunning()) rxThread->stopThread(1000);
-        fprintf(stderr, "Destructor: Cleaning up rxThread\r\n");
-        rxThread = nullptr;
-        fprintf(stderr, "Destructor: rxThread cleaned up\r\n");
-    }
-    else fprintf(stderr, "Destructor: rxThread is already NULL\r\n");//*/
 }
 
 //==============================================================================
@@ -309,6 +300,18 @@ void VBANReceptorAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
             rbmutex.lock();
             ringbuffer = rxThread->getRingBufferPointer();
             rbmutex.unlock();
+            if (ringbuffer!= nullptr)
+            {
+                if (editor!= nullptr)
+                {
+                    editor->gettingParametersFromProcessor = true;
+                    editor->textEditorIP.clear();
+                    editor->textEditorIP.setText(ipAddr);
+                    editor->textEditorSN.clear();
+                    editor->textEditorSN.setText(streamname);
+                    editor->gettingParametersFromProcessor = false;
+                }
+            }//*/
             for (frame=0; frame < numSamples; frame++)
                 for (channel = 0; channel < totalNumOutputChannels; channel++)
                     outputChannelData[channel][frame] = 0;
@@ -324,6 +327,8 @@ void VBANReceptorAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
 }
 
 //==============================================================================
+
+//==============================================================================
 bool VBANReceptorAudioProcessor::hasEditor() const
 {
     return true; // (change this to false if you choose to not supply an editor)
@@ -331,7 +336,9 @@ bool VBANReceptorAudioProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* VBANReceptorAudioProcessor::createEditor()
 {
-    return new VBANReceptorAudioProcessorEditor (*this);
+    auto ed = new VBANReceptorAudioProcessorEditor (*this);
+    //editor = ed;
+    return ed;
 }
 
 //==============================================================================

@@ -25,6 +25,11 @@ public:
     void paint (juce::Graphics&) override;
     void resized() override;
 
+    bool gettingParametersFromProcessor = false;
+    juce::TextEditor textEditorIP;
+    juce::TextEditor textEditorPort;
+    juce::TextEditor textEditorSN;
+
 private:
     VBANReceptorAudioProcessor& audioProcessor;
 
@@ -34,9 +39,6 @@ private:
     juce::Label labelRed;
     juce::Label labelFmt;
     juce::Label labelChannels;
-    juce::TextEditor textEditorIP;
-    juce::TextEditor textEditorPort;
-    juce::TextEditor textEditorSN;
     juce::ComboBox comboBoxNQ;
     juce::ComboBox comboBoxFmt;
     juce::ComboBox comboBoxReceptors;
