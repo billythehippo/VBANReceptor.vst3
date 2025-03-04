@@ -4,7 +4,7 @@ VBAN Receptor VST3 plugin
 
 This is a simple cross-platform VBAN Receptor JUCE based VST3 plugin for Linux, Mac OS and Windows, also AU one for Mac OS and LV2 for Linux.
 
-It can save IP, port, Streamname, format and redundancy in presets of our DAWs (tested on Reaper and Ardour on Linux as VST3, on Reaper on Mac OS as AU and also on Carla on Linux as LV2.
+It can save IP, port, Streamname, format and redundancy in presets of our DAWs (tested on Reaper and Ardour on Linux as VST3, on Reaper on Mac OS as AU and (yes, sound funny) LV2 (!!!) and also on Carla on Linux as LV2.
 
 The SCAN function on our VBAN Emitters (VBANReceptor.vst3) is coming soon.
 
