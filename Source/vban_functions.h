@@ -20,56 +20,25 @@
 #include "ringbuffer.h"
 
 
-typedef struct
-{
-    int onoff = 0;
-    char ipaddr[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-    uint16_t port = 0;
-    char streamname[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-    uint8_t red = 0;
-    uint8_t format = 0;
-} vban_plugin_tx_context_t;
-
-typedef struct
-{
-    int onoff = 0;
-    char ipaddr[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-    uint16_t port = 0;
-    char streamname[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-    uint8_t red = 0;
-    int host_samplerate;
-    int nframes;
-    uint32_t nuFrame = 0;
-    float* framebuf;
-    ringbuffer_t* ringbuffer = nullptr;
-
-    VBanPacket vbanRxPacket;
-
-} vban_plugin_rx_context_t;
-
-
-int compare_vban_tx_context(vban_plugin_tx_context_t* context1, vban_plugin_tx_context_t* context2);
-
-
-__always_inline uint16_t int16betole(u_int16_t input)
+static inline uint16_t int16betole(u_int16_t input)
 {
     return ((((uint8_t*)&input)[0])<<8) + ((uint8_t*)&input)[1];
 }
 
 
-__always_inline uint32_t int32betole(uint32_t input)
+static inline uint32_t int32betole(uint32_t input)
 {
     return (((((((uint8_t*)&input)[0]<<8)+((uint8_t*)&input)[1])<<8)+((uint8_t*)&input)[2])<<8)+((uint8_t*)&input)[3];
 }
 
 
-__always_inline void vban_inc_nuFrame(VBanHeader* header)
+static inline void vban_inc_nuFrame(VBanHeader* header)
 {
     header->nuFrame++;
 }
 
 
-__always_inline int vban_sample_convert(void* dstptr, uint8_t format_bit_dst, void* srcptr, uint8_t format_bit_src, int num)
+static inline int vban_sample_convert(void* dstptr, uint8_t format_bit_dst, void* srcptr, uint8_t format_bit_src, int num)
 {
     int ret = 0;
     
@@ -298,7 +267,7 @@ __always_inline int vban_sample_convert(void* dstptr, uint8_t format_bit_dst, vo
 }
 
 
-__always_inline int vban_read_frame_from_ringbuffer(float* dst, ringbuffer_t* ringbuffer, int num)
+static inline int vban_read_frame_from_ringbuffer(float* dst, ringbuffer_t* ringbuffer, int num)
 {
     size_t size = num*sizeof(float);
     if (ringbuffer_read_space(ringbuffer)>=size)
@@ -310,7 +279,7 @@ __always_inline int vban_read_frame_from_ringbuffer(float* dst, ringbuffer_t* ri
 }
 
 
-__always_inline int vban_add_frame_from_ringbuffer(float* dst, ringbuffer_t* ringbuffer, int num)
+static inline int vban_add_frame_from_ringbuffer(float* dst, ringbuffer_t* ringbuffer, int num)
 {
     float fsamples[256];
     size_t size = num*sizeof(float);
@@ -324,7 +293,7 @@ __always_inline int vban_add_frame_from_ringbuffer(float* dst, ringbuffer_t* rin
 }
 
 
-__always_inline int vban_get_format_SR(long host_samplerate)
+static inline int vban_get_format_SR(long host_samplerate)
 {
     int i;
     for (i=0; i<VBAN_SR_MAXNUMBER; i++) if (host_samplerate==VBanSRList[i]) return i;
@@ -332,7 +301,7 @@ __always_inline int vban_get_format_SR(long host_samplerate)
 }
 
 
-__always_inline uint vban_strip_vban_packet(uint8_t format_bit, uint16_t nbchannels)
+static inline uint vban_strip_vban_packet(uint8_t format_bit, uint16_t nbchannels)
 {
     uint framesize = VBanBitResolutionSize[format_bit]*nbchannels;
     uint nframes = VBAN_DATA_MAX_SIZE/framesize;
@@ -341,7 +310,7 @@ __always_inline uint vban_strip_vban_packet(uint8_t format_bit, uint16_t nbchann
 }
 
 
-__always_inline uint vban_strip_vban_data(uint datasize, uint8_t format_bit, uint16_t nbchannels)
+static inline uint vban_strip_vban_data(uint datasize, uint8_t format_bit, uint16_t nbchannels)
 {
     uint framesize = VBanBitResolutionSize[format_bit]*nbchannels;
     uint nframes = datasize/framesize;
@@ -350,19 +319,19 @@ __always_inline uint vban_strip_vban_data(uint datasize, uint8_t format_bit, uin
 }
 
 
-__always_inline uint vban_calc_nbs(uint datasize, uint8_t resolution, uint16_t nbchannels)
+static inline uint vban_calc_nbs(uint datasize, uint8_t resolution, uint16_t nbchannels)
 {
     return datasize/VBanBitResolutionSize[resolution]*nbchannels;
 }
 
 
-__always_inline uint vban_packet_to_float_buffer(uint pktdatalen, uint8_t resolution)
+static inline uint vban_packet_to_float_buffer(uint pktdatalen, uint8_t resolution)
 {
     return sizeof(float)*pktdatalen/VBanBitResolutionSize[resolution];
 }
 
 
-__always_inline int file_exists(const char* __restrict filename)
+static inline int file_exists(const char* __restrict filename)
 {
     if (access(filename, F_OK)==0) return 1;
     return 0;

@@ -50,15 +50,28 @@ VBANReceptorAudioProcessorEditor::VBANReceptorAudioProcessorEditor (VBANReceptor
   textEditorIP.setBounds (120, 16, 100, 24);
   textEditorIP.onTextChange = [this]()
   {
-    bool onoffState = audioProcessor.parameters.getRawParameterValue("onoff")->load();
-    if ((onoffState==false)||(gettingParametersFromProcessor==true))
+    auto* onoffState = audioProcessor.parameters.getRawParameterValue("onoff");
+    std::string ipv4_pattern = R"((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))";
+    std::regex ipv4_regex(ipv4_pattern);
+
+    if (*onoffState==false)
     {
-      audioProcessor.refreshIPAddressParametersFromText((char*)textEditorIP.getText().toRawUTF8());
+      if (std::regex_match(textEditorIP.getText().toStdString(), ipv4_regex))
+      {
+        fprintf(stderr, "IP %s OK\r\n", (char*)textEditorIP.getText().toRawUTF8());
+        audioProcessor.refreshIPAddressParametersFromText((char*)textEditorIP.getText().toRawUTF8());
+      }
+      else
+      {
+        fprintf(stderr, "IP invalid or incomplete\r\n");
+      }
     }
     else
     {
-      audioProcessor.refreshIPAddressTextFromParameters((char*)textEditorIP.getText().toRawUTF8());
-      //juce::AlertWindow::showMessageBoxAsync(juce::AlertWindow::WarningIcon, "Warning", "Unable to change IP address while running!", "OK");
+      memset(tempText, 0, 16);
+      audioProcessor.refreshIPAddressTextFromParameters(tempText);
+      textEditorIP.setText (TRANS (tempText));
+      juce::AlertWindow::showMessageBoxAsync(juce::AlertWindow::WarningIcon, "Warning", "Unable to change IP address while running!", "OK");
     }
   };
 
@@ -69,8 +82,8 @@ VBANReceptorAudioProcessorEditor::VBANReceptorAudioProcessorEditor (VBANReceptor
   textEditorPort.onTextChange = [this]()
   {
     int udpPort;
-    bool onoffState = audioProcessor.parameters.getRawParameterValue("onoff")->load();
-    if (onoffState==false)
+    auto* onoffState = audioProcessor.parameters.getRawParameterValue("onoff");
+    if (*onoffState==false)
     {
       udpPort = audioProcessor.refreshPortParametersFromText((char*)textEditorPort.getText().toRawUTF8());
     }
@@ -95,8 +108,8 @@ VBANReceptorAudioProcessorEditor::VBANReceptorAudioProcessorEditor (VBANReceptor
   textEditorSN.setBounds (120, 80, 100, 24);
   textEditorSN.onTextChange = [this]()
   {
-    bool onoffState = audioProcessor.parameters.getRawParameterValue("onoff")->load();
-    if ((onoffState==false)||(gettingParametersFromProcessor==true))
+    auto* onoffState = audioProcessor.parameters.getRawParameterValue("onoff");
+    if ((*onoffState==false)||(gettingParametersFromProcessor==true))
     {
       audioProcessor.refreshStreamNameParametersFromText((char*)textEditorSN.getText().toRawUTF8(), strlen(textEditorSN.getText().toRawUTF8()));
     }
@@ -119,8 +132,8 @@ VBANReceptorAudioProcessorEditor::VBANReceptorAudioProcessorEditor (VBANReceptor
   comboBoxNQ.onChange = [this]()
   {
     float newValue;
-    bool onoffState = audioProcessor.parameters.getRawParameterValue("onoff")->load();
-    if (onoffState==false) // Current state is OFF
+    auto* onoffState = audioProcessor.parameters.getRawParameterValue("onoff");
+    if (*onoffState==false) // Current state is OFF
     {
       newValue = comboBoxNQ.getSelectedItemIndex();
       audioProcessor.parameters.getParameter("redundancy")->setValueNotifyingHost(newValue/4.0f);

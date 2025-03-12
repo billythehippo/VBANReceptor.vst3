@@ -9,6 +9,7 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include <regex>
 #include "PluginProcessor.h"
 #include "vban_functions.h"
 
@@ -50,6 +51,7 @@ private:
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> gainSliderAttachment;
 
     bool scanEnabled = false;
+    char tempText[16];
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VBANReceptorAudioProcessorEditor)
 };
