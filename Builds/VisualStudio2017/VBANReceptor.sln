@@ -7,6 +7,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VBANReceptor - Standalone P
 		{85A89DD8-D5E4-C6C0-557D-74C58DBD31ED} = {85A89DD8-D5E4-C6C0-557D-74C58DBD31ED}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VBANReceptor - VST", "VBANReceptor_VST.vcxproj", "{D0CC3BC5-8329-2A40-09C2-BB6221467E10}"
+	ProjectSection(ProjectDependencies) = postProject
+		{85A89DD8-D5E4-C6C0-557D-74C58DBD31ED} = {85A89DD8-D5E4-C6C0-557D-74C58DBD31ED}
+	EndProjectSection
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VBANReceptor - VST3", "VBANReceptor_VST3.vcxproj", "{B0F549ED-F7E4-38ED-EA29-B630B0553CCB}"
 	ProjectSection(ProjectDependencies) = postProject
 		{85A89DD8-D5E4-C6C0-557D-74C58DBD31ED} = {85A89DD8-D5E4-C6C0-557D-74C58DBD31ED}
@@ -31,6 +36,10 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0CC3BC5-8329-2A40-09C2-BB6221467E10}.Debug|x64.ActiveCfg = Debug|x64
+		{D0CC3BC5-8329-2A40-09C2-BB6221467E10}.Debug|x64.Build.0 = Debug|x64
+		{D0CC3BC5-8329-2A40-09C2-BB6221467E10}.Release|x64.ActiveCfg = Release|x64
+		{D0CC3BC5-8329-2A40-09C2-BB6221467E10}.Release|x64.Build.0 = Release|x64
 		{B0F549ED-F7E4-38ED-EA29-B630B0553CCB}.Debug|x64.ActiveCfg = Debug|x64
 		{B0F549ED-F7E4-38ED-EA29-B630B0553CCB}.Debug|x64.Build.0 = Debug|x64
 		{B0F549ED-F7E4-38ED-EA29-B630B0553CCB}.Release|x64.ActiveCfg = Release|x64

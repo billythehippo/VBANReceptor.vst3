@@ -83,6 +83,7 @@
 		049E5EA805F0BA755D9DAB06 /* juce_audio_devices */ /* juce_audio_devices */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_devices; path = /usr/share/juce/modules/juce_audio_devices; sourceTree = "<absolute>"; };
 		05A68CC4FE5F10AEAF334D6A /* include_juce_events.mm */ /* include_juce_events.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_events.mm; path = ../../JuceLibraryCode/include_juce_events.mm; sourceTree = SOURCE_ROOT; };
 		0780CF764912C2225FC0AB34 /* CoreAudioKit.framework */ /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		14F50373BA0B8FC0562FC912 /* vban_functions.h */ /* vban_functions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vban_functions.h; path = ../../Source/vban_functions.h; sourceTree = SOURCE_ROOT; };
 		18E78AEDA67FDC9141EDB61A /* UserNotifications.framework */ /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		1C4DABD3DBBEC08CB09A81EF /* juce_events */ /* juce_events */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_events; path = /usr/share/juce/modules/juce_events; sourceTree = "<absolute>"; };
 		1CC94D6ECC1EFBCA90369285 /* AVFoundation.framework */ /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -95,6 +96,7 @@
 		2FE6A1607F1863A8C16432A8 /* Accelerate.framework */ /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		33C4F8CF8D14E04E68B47EB2 /* juce_audio_utils */ /* juce_audio_utils */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_utils; path = /usr/share/juce/modules/juce_audio_utils; sourceTree = "<absolute>"; };
 		33DDA3CC818DEB7A89EF7536 /* Info-Standalone_Plugin.plist */ /* Info-Standalone_Plugin.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Standalone_Plugin.plist"; path = "Info-Standalone_Plugin.plist"; sourceTree = SOURCE_ROOT; };
+		3AA3F09DBE0954F371355F3C /* ringbuffer.h */ /* ringbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ringbuffer.h; path = ../../Source/ringbuffer.h; sourceTree = SOURCE_ROOT; };
 		3B19E01879B59957AEC2734E /* Foundation.framework */ /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3D5B08E0DA262C9572677881 /* AUv3 AppExtension */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VBANReceptor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC839E0C5CFF037BD125838 /* PluginProcessor.h */ /* PluginProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginProcessor.h; path = ../../Source/PluginProcessor.h; sourceTree = SOURCE_ROOT; };
@@ -104,6 +106,7 @@
 		5419045C5410BABC38B45B33 /* CoreImage.framework */ /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		605306D3516A1797E2CAB8EC /* include_juce_audio_plugin_client_ARA.cpp */ /* include_juce_audio_plugin_client_ARA.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_plugin_client_ARA.cpp; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_ARA.cpp; sourceTree = SOURCE_ROOT; };
 		6375D834AA8A7E6565768988 /* UIKit.framework */ /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6725A1C7369DB647012EFA2E /* vban.h */ /* vban.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vban.h; path = ../../Source/vban.h; sourceTree = SOURCE_ROOT; };
 		67CD7A44287F088645DEBEF3 /* Metal.framework */ /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		6BE9108516638A7ADCF9F2D5 /* JucePluginDefines.h */ /* JucePluginDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JucePluginDefines.h; path = ../../JuceLibraryCode/JucePluginDefines.h; sourceTree = SOURCE_ROOT; };
 		701C9E87A813D7A7B339931B /* JuceHeader.h */ /* JuceHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JuceHeader.h; path = ../../JuceLibraryCode/JuceHeader.h; sourceTree = SOURCE_ROOT; };
@@ -222,6 +225,9 @@
 				3DC839E0C5CFF037BD125838,
 				A11C53AD21664F675A259926,
 				D72F9A79338C20C2421FA084,
+				3AA3F09DBE0954F371355F3C,
+				6725A1C7369DB647012EFA2E,
+				14F50373BA0B8FC0562FC912,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -627,7 +633,7 @@
 					"JucePlugin_Build_LV2=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Enable_ARA=0",
-					"JucePlugin_Name=\\\"VBANReceptor\\\"",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
 					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
 					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
@@ -659,7 +665,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBANReceptor\\\"",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
@@ -734,7 +740,7 @@
 					"JucePlugin_Build_LV2=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Enable_ARA=0",
-					"JucePlugin_Name=\\\"VBANReceptor\\\"",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
 					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
 					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
@@ -766,7 +772,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBANReceptor\\\"",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
@@ -890,7 +896,7 @@
 					"JucePlugin_Build_LV2=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Enable_ARA=0",
-					"JucePlugin_Name=\\\"VBANReceptor\\\"",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
 					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
 					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
@@ -922,7 +928,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBANReceptor\\\"",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
@@ -1045,7 +1051,7 @@
 					"JucePlugin_Build_LV2=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Enable_ARA=0",
-					"JucePlugin_Name=\\\"VBANReceptor\\\"",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
 					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
 					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
@@ -1077,7 +1083,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBANReceptor\\\"",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
@@ -1151,7 +1157,7 @@
 					"JucePlugin_Build_LV2=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Enable_ARA=0",
-					"JucePlugin_Name=\\\"VBANReceptor\\\"",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
 					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
 					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
@@ -1183,7 +1189,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBANReceptor\\\"",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
@@ -1258,7 +1264,7 @@
 					"JucePlugin_Build_LV2=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Enable_ARA=0",
-					"JucePlugin_Name=\\\"VBANReceptor\\\"",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
 					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
 					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
@@ -1290,7 +1296,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBANReceptor\\\"",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
@@ -1364,7 +1370,7 @@
 					"JucePlugin_Build_LV2=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Enable_ARA=0",
-					"JucePlugin_Name=\\\"VBANReceptor\\\"",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
 					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
 					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
@@ -1396,7 +1402,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBANReceptor\\\"",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",
@@ -1470,7 +1476,7 @@
 					"JucePlugin_Build_LV2=0",
 					"JucePlugin_Enable_IAA=0",
 					"JucePlugin_Enable_ARA=0",
-					"JucePlugin_Name=\\\"VBANReceptor\\\"",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
 					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
 					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
@@ -1502,7 +1508,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBANReceptor\\\"",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JucePlugin_ARAContentTypes=0",

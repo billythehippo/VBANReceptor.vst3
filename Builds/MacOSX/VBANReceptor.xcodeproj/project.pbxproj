@@ -1,0 +1,3546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		2919D301855F6F3D8B90B8CA /* VBANReceptor - All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DF4864668C764408A22B7386;
+			buildPhases = (
+			);
+			dependencies = (
+				9E5E88A76438B3060A80B249,
+				BDAA4C065428939AE308B772,
+				45A2841B4F9BFC86174A06E0,
+				6240EF880B8CFE4259F52D99,
+				741CCB61CF91DA90C91A7C53,
+				AD790B50BB6BE23546475D9C,
+				2DA7A56B103836BDB3E1784C,
+				C14F7F9D1AA86D3861DEBEC1,
+				03B2735DF5B741C7A2F3DFA0,
+			);
+			name = "VBANReceptor - All";
+			productName = VBANReceptor;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		043954E823C506747B805F7B /* juce_VST3ManifestHelper.mm */ = {isa = PBXBuildFile; fileRef = 66B99D7890EC757BBD82C472; settings = { COMPILER_FLAGS = "-fobjc-arc -w -DJUCE_SKIP_PRECOMPILED_HEADER"; }; };
+		147FE9A6FC6B56AD6281329A /* PluginProcessor.cpp */ = {isa = PBXBuildFile; fileRef = D39CCB7A5C36894F0C8A0A27; };
+		19D3645EE2B3583494F9FA01 /* include_juce_events.mm */ = {isa = PBXBuildFile; fileRef = 05A68CC4FE5F10AEAF334D6A; };
+		1A2692FFD520D13677BBBF00 /* Accelerate.framework */ = {isa = PBXBuildFile; fileRef = 2FE6A1607F1863A8C16432A8; };
+		1A963E74CE9A1A7D384C668C /* LV2 Plugin */ = {isa = PBXBuildFile; fileRef = 1ABBBA64BE65A02D09186254; };
+		2BA9DB5B04005AF4C74D81AE /* RecentFilesMenuTemplate.nib */ = {isa = PBXBuildFile; fileRef = 98C69B1D14D43892EE8DA7D6; };
+		35060F3595C5FB37050326A3 /* LV2 Manifest Helper */ = {isa = PBXBuildFile; fileRef = D54B0F036A5A041DC08F9174; };
+		37A07EA998FC853ED270B6FD /* Shared Code */ = {isa = PBXBuildFile; fileRef = BCAB2A15E144681B15850322; };
+		37BBCB6CF85F9D04245CE383 /* include_juce_gui_extra.mm */ = {isa = PBXBuildFile; fileRef = B4C1DA587C7E13D198A3054B; };
+		4150FFA16F64025BF67E58DB /* include_juce_audio_basics.mm */ = {isa = PBXBuildFile; fileRef = 8A4F05CF0685E83CA5CF041D; };
+		441B3F0979AF8DDC6DF165FD /* Foundation.framework */ = {isa = PBXBuildFile; fileRef = 3B19E01879B59957AEC2734E; };
+		4782BE85777E87F73AE90AFF /* include_juce_audio_formats.mm */ = {isa = PBXBuildFile; fileRef = C0A0E9C134890C52EAFA15CD; };
+		4B20DBB1E81E2582F3E0E3A7 /* Standalone Plugin */ = {isa = PBXBuildFile; fileRef = AB4F4C18FA1A5411534C0F49; };
+		4B555B7B3B8B6E9CA1C163BF /* Security.framework */ = {isa = PBXBuildFile; fileRef = DBF98415FB19ACC85E97C6FB; };
+		4C146C57C0B32458CDA87B40 /* include_juce_gui_basics.mm */ = {isa = PBXBuildFile; fileRef = 72016FAACBC9CB0E794D4D3E; };
+		4E53542167B8A8FAAB8DD3C9 /* juce_LV2ManifestHelper.cpp */ = {isa = PBXBuildFile; fileRef = A0252AC70FCB40A3803CAD4F; settings = { COMPILER_FLAGS = "-w -DJUCE_SKIP_PRECOMPILED_HEADER"; }; };
+		53CC0E8CE663182F7CD2F5BB /* AVFoundation.framework */ = {isa = PBXBuildFile; fileRef = 1CC94D6ECC1EFBCA90369285; };
+		566E09B421229E2AB0D63AB8 /* include_juce_audio_devices.mm */ = {isa = PBXBuildFile; fileRef = 7031EB2DB5981A531F86E4D9; };
+		58971906DD0CC2AD9D1448CD /* include_juce_audio_processors_lv2_libs.cpp */ = {isa = PBXBuildFile; fileRef = CD6CF204768F4A2BD8E28A2F; };
+		5A3D73440E879D6271AF61D3 /* include_juce_audio_plugin_client_Standalone.cpp */ = {isa = PBXBuildFile; fileRef = 8415FAA325C5C3353C40EF61; };
+		5B3DE1B2EBAB76E261A87475 /* include_juce_audio_utils.mm */ = {isa = PBXBuildFile; fileRef = 424C422278FA3B0AEB9D8B38; };
+		6549AEAA92A0C67C1BEE2CA5 /* PluginEditor.cpp */ = {isa = PBXBuildFile; fileRef = A11C53AD21664F675A259926; };
+		658FD6135CAE083BAD3B3A00 /* include_juce_audio_processors.mm */ = {isa = PBXBuildFile; fileRef = BC98B35B40C93B3031EE3EEE; };
+		78989A6AF37971BCE80A4887 /* include_juce_audio_plugin_client_LV2.mm */ = {isa = PBXBuildFile; fileRef = 02DFE86D1C5E0D630B06ED3B; };
+		797044D42D7BB4A1F265901A /* include_juce_audio_plugin_client_AU_1.mm */ = {isa = PBXBuildFile; fileRef = E76A4B8D629C800458505381; };
+		7A536771120737279EAF9735 /* Cocoa.framework */ = {isa = PBXBuildFile; fileRef = 8667A86F095DC15C7D610E65; };
+		7CDD71133C275665038E6E04 /* include_juce_data_structures.mm */ = {isa = PBXBuildFile; fileRef = A914580E968252C52B7076A6; };
+		7CE901B1C22091001B295D41 /* include_juce_core.mm */ = {isa = PBXBuildFile; fileRef = AD11F5477C791B75C60781E6; };
+		868865DCF1110AF9905EB297 /* AU */ = {isa = PBXBuildFile; fileRef = 9A7C3F1BDA50E26BEE96717C; };
+		8BAA8BB5BC8C4A8E7614FD56 /* WebKit.framework */ = {isa = PBXBuildFile; fileRef = 8DF26931859F093FAC4C6718; };
+		8ED24FE577FE562897BFC371 /* MetalKit.framework */ = {isa = PBXBuildFile; fileRef = ABF4D2D8C4D3E120AA4933BD; settings = { ATTRIBUTES = (Weak, ); }; };
+		8F127A925F2EF4DBC781713D /* CoreMIDI.framework */ = {isa = PBXBuildFile; fileRef = 95CEC054B1DFC99C14A230B0; };
+		92946AE686AD8EBFE1BC2408 /* include_juce_audio_processors_ara.cpp */ = {isa = PBXBuildFile; fileRef = 2F8B695E4685D33167AF6E10; };
+		A260C3A848013275669CBA84 /* include_juce_audio_plugin_client_AUv3.mm */ = {isa = PBXBuildFile; fileRef = 939A0AE78FE74BA1998CF044; };
+		A3BDC634BB927BDEBD8A858A /* VST3 Manifest Helper */ = {isa = PBXBuildFile; fileRef = 32DB5CC268D9C3BB9B34AC06; };
+		A52242727D65117CED8F5926 /* DiscRecording.framework */ = {isa = PBXBuildFile; fileRef = 802B6CECD7A2B0EBD129AE84; };
+		A6C03AB09B0169FF5C2000F9 /* AudioUnit.framework */ = {isa = PBXBuildFile; fileRef = A2B6C969CA324F3083F17348; };
+		B007FF911396AD1F81C41EB5 /* include_juce_graphics.mm */ = {isa = PBXBuildFile; fileRef = B4D377205E15EB8E96D8085F; };
+		B2376B4118359C8348225153 /* IOKit.framework */ = {isa = PBXBuildFile; fileRef = 9111D0F746F41C4B739758DD; };
+		B456166BF69C669817C4D93B /* CoreAudio.framework */ = {isa = PBXBuildFile; fileRef = 4DCF8B2378BE5B119F8C87A3; };
+		BCACC0A1D31FBBBD7350A072 /* Metal.framework */ = {isa = PBXBuildFile; fileRef = 67CD7A44287F088645DEBEF3; settings = { ATTRIBUTES = (Weak, ); }; };
+		C67A18DB062A495C3F60205D /* CoreAudioKit.framework */ = {isa = PBXBuildFile; fileRef = 0780CF764912C2225FC0AB34; };
+		C6E97C95A2A8B0D5F5280DA8 /* include_juce_audio_plugin_client_AU_2.mm */ = {isa = PBXBuildFile; fileRef = 85A0193B89111066521FD224; };
+		C999E94F7F692FDE0D50A6F8 /* QuartzCore.framework */ = {isa = PBXBuildFile; fileRef = 792483367710C7C5ED3836AD; };
+		CC4A00B55706C6EF57F5C6EE /* include_juce_audio_plugin_client_ARA.cpp */ = {isa = PBXBuildFile; fileRef = 605306D3516A1797E2CAB8EC; };
+		D5DF227673531C3DB02FF391 /* VST3 */ = {isa = PBXBuildFile; fileRef = 3B12D41FF5F07FA55FEBBBA4; };
+		D9555DA5CB88D02B45DBF9FC /* include_juce_audio_plugin_client_VST3.mm */ = {isa = PBXBuildFile; fileRef = 06CFDFFB0E0F56BF4DAB6591; };
+		E325F548764817C82230BFF8 /* VST */ = {isa = PBXBuildFile; fileRef = 60F35F12C52414BB09738E89; };
+		EA9D54F3CE0BD2DFB21FAEF8 /* include_juce_audio_plugin_client_VST2.mm */ = {isa = PBXBuildFile; fileRef = 1427D03A800D00ED14D7F063; };
+		ED54C1A86E637CD2CF89758F /* AUv3 AppExtension */ = {isa = PBXBuildFile; fileRef = 3D5B08E0DA262C9572677881; };
+		F8B2966BC6E60510D2EECEEB /* AudioToolbox.framework */ = {isa = PBXBuildFile; fileRef = ACC8C01DA29A9EA97E97D3F6; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1089A7D03695BCB0E173E370 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED54C1A86E637CD2CF89758F,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		02DFE86D1C5E0D630B06ED3B /* include_juce_audio_plugin_client_LV2.mm */ /* include_juce_audio_plugin_client_LV2.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_plugin_client_LV2.mm; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_LV2.mm; sourceTree = SOURCE_ROOT; };
+		049E5EA805F0BA755D9DAB06 /* juce_audio_devices */ /* juce_audio_devices */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_devices; path = /usr/share/juce/modules/juce_audio_devices; sourceTree = "<absolute>"; };
+		05A68CC4FE5F10AEAF334D6A /* include_juce_events.mm */ /* include_juce_events.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_events.mm; path = ../../JuceLibraryCode/include_juce_events.mm; sourceTree = SOURCE_ROOT; };
+		06CFDFFB0E0F56BF4DAB6591 /* include_juce_audio_plugin_client_VST3.mm */ /* include_juce_audio_plugin_client_VST3.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_plugin_client_VST3.mm; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_VST3.mm; sourceTree = SOURCE_ROOT; };
+		0780CF764912C2225FC0AB34 /* CoreAudioKit.framework */ /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		1427D03A800D00ED14D7F063 /* include_juce_audio_plugin_client_VST2.mm */ /* include_juce_audio_plugin_client_VST2.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_plugin_client_VST2.mm; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_VST2.mm; sourceTree = SOURCE_ROOT; };
+		14F50373BA0B8FC0562FC912 /* vban_functions.h */ /* vban_functions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vban_functions.h; path = ../../Source/vban_functions.h; sourceTree = SOURCE_ROOT; };
+		1ABBBA64BE65A02D09186254 /* LV2 Plugin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = VBANReceptor.so; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C4DABD3DBBEC08CB09A81EF /* juce_events */ /* juce_events */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_events; path = /usr/share/juce/modules/juce_events; sourceTree = "<absolute>"; };
+		1CC94D6ECC1EFBCA90369285 /* AVFoundation.framework */ /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		235C7873DD56DC7F1C9A3F4A /* AUv3_AppExtension.entitlements */ /* AUv3_AppExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = AUv3_AppExtension.entitlements; path = AUv3_AppExtension.entitlements; sourceTree = SOURCE_ROOT; };
+		28162684F106A373720AF414 /* JuceLV2Defines.h */ /* JuceLV2Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JuceLV2Defines.h; path = ../../JuceLibraryCode/JuceLV2Defines.h; sourceTree = SOURCE_ROOT; };
+		28F685414FDBAB112FECEBB2 /* juce_audio_basics */ /* juce_audio_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_basics; path = /usr/share/juce/modules/juce_audio_basics; sourceTree = "<absolute>"; };
+		290CC3FB9AE6069530B929C4 /* juce_gui_extra */ /* juce_gui_extra */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_gui_extra; path = /usr/share/juce/modules/juce_gui_extra; sourceTree = "<absolute>"; };
+		2F8B695E4685D33167AF6E10 /* include_juce_audio_processors_ara.cpp */ /* include_juce_audio_processors_ara.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_processors_ara.cpp; path = ../../JuceLibraryCode/include_juce_audio_processors_ara.cpp; sourceTree = SOURCE_ROOT; };
+		2FE6A1607F1863A8C16432A8 /* Accelerate.framework */ /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		32DB5CC268D9C3BB9B34AC06 /* VST3 Manifest Helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = juce_vst3_helper; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C4F8CF8D14E04E68B47EB2 /* juce_audio_utils */ /* juce_audio_utils */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_utils; path = /usr/share/juce/modules/juce_audio_utils; sourceTree = "<absolute>"; };
+		33CF231A1D48F86E1A34A289 /* Info-LV2_Manifest_Helper.plist */ /* Info-LV2_Manifest_Helper.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-LV2_Manifest_Helper.plist"; path = "Info-LV2_Manifest_Helper.plist"; sourceTree = SOURCE_ROOT; };
+		33DDA3CC818DEB7A89EF7536 /* Info-Standalone_Plugin.plist */ /* Info-Standalone_Plugin.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Standalone_Plugin.plist"; path = "Info-Standalone_Plugin.plist"; sourceTree = SOURCE_ROOT; };
+		34DD7D628D74FB6D683DCE95 /* Info-VST3_Manifest_Helper.plist */ /* Info-VST3_Manifest_Helper.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-VST3_Manifest_Helper.plist"; path = "Info-VST3_Manifest_Helper.plist"; sourceTree = SOURCE_ROOT; };
+		3AA3F09DBE0954F371355F3C /* ringbuffer.h */ /* ringbuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ringbuffer.h; path = ../../Source/ringbuffer.h; sourceTree = SOURCE_ROOT; };
+		3B12D41FF5F07FA55FEBBBA4 /* VST3 */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VBANReceptor.vst3; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B19E01879B59957AEC2734E /* Foundation.framework */ /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3D5B08E0DA262C9572677881 /* AUv3 AppExtension */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VBANReceptor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DC839E0C5CFF037BD125838 /* PluginProcessor.h */ /* PluginProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginProcessor.h; path = ../../Source/PluginProcessor.h; sourceTree = SOURCE_ROOT; };
+		424C422278FA3B0AEB9D8B38 /* include_juce_audio_utils.mm */ /* include_juce_audio_utils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_utils.mm; path = ../../JuceLibraryCode/include_juce_audio_utils.mm; sourceTree = SOURCE_ROOT; };
+		4DCF8B2378BE5B119F8C87A3 /* CoreAudio.framework */ /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		605306D3516A1797E2CAB8EC /* include_juce_audio_plugin_client_ARA.cpp */ /* include_juce_audio_plugin_client_ARA.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_plugin_client_ARA.cpp; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_ARA.cpp; sourceTree = SOURCE_ROOT; };
+		60F35F12C52414BB09738E89 /* VST */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VBANReceptor.vst; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B99D7890EC757BBD82C472 /* juce_VST3ManifestHelper.mm */ /* juce_VST3ManifestHelper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = juce_VST3ManifestHelper.mm; path = /usr/share/juce/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.mm; sourceTree = "<absolute>"; };
+		6725A1C7369DB647012EFA2E /* vban.h */ /* vban.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vban.h; path = ../../Source/vban.h; sourceTree = SOURCE_ROOT; };
+		67CD7A44287F088645DEBEF3 /* Metal.framework */ /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		6BE9108516638A7ADCF9F2D5 /* JucePluginDefines.h */ /* JucePluginDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JucePluginDefines.h; path = ../../JuceLibraryCode/JucePluginDefines.h; sourceTree = SOURCE_ROOT; };
+		701C9E87A813D7A7B339931B /* JuceHeader.h */ /* JuceHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JuceHeader.h; path = ../../JuceLibraryCode/JuceHeader.h; sourceTree = SOURCE_ROOT; };
+		7031EB2DB5981A531F86E4D9 /* include_juce_audio_devices.mm */ /* include_juce_audio_devices.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_devices.mm; path = ../../JuceLibraryCode/include_juce_audio_devices.mm; sourceTree = SOURCE_ROOT; };
+		72016FAACBC9CB0E794D4D3E /* include_juce_gui_basics.mm */ /* include_juce_gui_basics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_gui_basics.mm; path = ../../JuceLibraryCode/include_juce_gui_basics.mm; sourceTree = SOURCE_ROOT; };
+		792483367710C7C5ED3836AD /* QuartzCore.framework */ /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7C5966DAC70484F7B4C50DED /* Info-VST.plist */ /* Info-VST.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-VST.plist"; path = "Info-VST.plist"; sourceTree = SOURCE_ROOT; };
+		802B6CECD7A2B0EBD129AE84 /* DiscRecording.framework */ /* DiscRecording.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiscRecording.framework; path = System/Library/Frameworks/DiscRecording.framework; sourceTree = SDKROOT; };
+		8415FAA325C5C3353C40EF61 /* include_juce_audio_plugin_client_Standalone.cpp */ /* include_juce_audio_plugin_client_Standalone.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_plugin_client_Standalone.cpp; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_Standalone.cpp; sourceTree = SOURCE_ROOT; };
+		85A0193B89111066521FD224 /* include_juce_audio_plugin_client_AU_2.mm */ /* include_juce_audio_plugin_client_AU_2.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_plugin_client_AU_2.mm; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_AU_2.mm; sourceTree = SOURCE_ROOT; };
+		8667A86F095DC15C7D610E65 /* Cocoa.framework */ /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		88BF051417458203CFC172A7 /* Info-AU.plist */ /* Info-AU.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-AU.plist"; path = "Info-AU.plist"; sourceTree = SOURCE_ROOT; };
+		8A3EA94119676FC306A41D50 /* juce_data_structures */ /* juce_data_structures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_data_structures; path = /usr/share/juce/modules/juce_data_structures; sourceTree = "<absolute>"; };
+		8A4F05CF0685E83CA5CF041D /* include_juce_audio_basics.mm */ /* include_juce_audio_basics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_basics.mm; path = ../../JuceLibraryCode/include_juce_audio_basics.mm; sourceTree = SOURCE_ROOT; };
+		8DF26931859F093FAC4C6718 /* WebKit.framework */ /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		9111D0F746F41C4B739758DD /* IOKit.framework */ /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		917089D74EB4014EB34F6421 /* juce_audio_plugin_client */ /* juce_audio_plugin_client */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_plugin_client; path = /usr/share/juce/modules/juce_audio_plugin_client; sourceTree = "<absolute>"; };
+		939A0AE78FE74BA1998CF044 /* include_juce_audio_plugin_client_AUv3.mm */ /* include_juce_audio_plugin_client_AUv3.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_plugin_client_AUv3.mm; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_AUv3.mm; sourceTree = SOURCE_ROOT; };
+		95CEC054B1DFC99C14A230B0 /* CoreMIDI.framework */ /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		98C69B1D14D43892EE8DA7D6 /* RecentFilesMenuTemplate.nib */ /* RecentFilesMenuTemplate.nib */ = {isa = PBXFileReference; lastKnownFileType = file.nib; name = RecentFilesMenuTemplate.nib; path = RecentFilesMenuTemplate.nib; sourceTree = SOURCE_ROOT; };
+		9A455A742E1BEF6575597636 /* juce_gui_basics */ /* juce_gui_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_gui_basics; path = /usr/share/juce/modules/juce_gui_basics; sourceTree = "<absolute>"; };
+		9A7C3F1BDA50E26BEE96717C /* AU */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VBANReceptor.component; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E805A2643BB119CCCDEE073 /* juce_audio_formats */ /* juce_audio_formats */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_formats; path = /usr/share/juce/modules/juce_audio_formats; sourceTree = "<absolute>"; };
+		A0252AC70FCB40A3803CAD4F /* juce_LV2ManifestHelper.cpp */ /* juce_LV2ManifestHelper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = juce_LV2ManifestHelper.cpp; path = /usr/share/juce/modules/juce_audio_plugin_client/LV2/juce_LV2ManifestHelper.cpp; sourceTree = "<absolute>"; };
+		A11C53AD21664F675A259926 /* PluginEditor.cpp */ /* PluginEditor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PluginEditor.cpp; path = ../../Source/PluginEditor.cpp; sourceTree = SOURCE_ROOT; };
+		A2B6C969CA324F3083F17348 /* AudioUnit.framework */ /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		A914580E968252C52B7076A6 /* include_juce_data_structures.mm */ /* include_juce_data_structures.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_data_structures.mm; path = ../../JuceLibraryCode/include_juce_data_structures.mm; sourceTree = SOURCE_ROOT; };
+		A9BA90C6D4E5CC9456B715A7 /* juce_audio_processors */ /* juce_audio_processors */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_processors; path = /usr/share/juce/modules/juce_audio_processors; sourceTree = "<absolute>"; };
+		AB4F4C18FA1A5411534C0F49 /* Standalone Plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VBANReceptor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABF4D2D8C4D3E120AA4933BD /* MetalKit.framework */ /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		ACC8C01DA29A9EA97E97D3F6 /* AudioToolbox.framework */ /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AD11F5477C791B75C60781E6 /* include_juce_core.mm */ /* include_juce_core.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_core.mm; path = ../../JuceLibraryCode/include_juce_core.mm; sourceTree = SOURCE_ROOT; };
+		B1D45E6149E9B6C762A3C9FD /* Info-LV2_Plugin.plist */ /* Info-LV2_Plugin.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-LV2_Plugin.plist"; path = "Info-LV2_Plugin.plist"; sourceTree = SOURCE_ROOT; };
+		B247DFB6FD89A3C626BE7C1E /* juce_core */ /* juce_core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_core; path = /usr/share/juce/modules/juce_core; sourceTree = "<absolute>"; };
+		B4C1DA587C7E13D198A3054B /* include_juce_gui_extra.mm */ /* include_juce_gui_extra.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_gui_extra.mm; path = ../../JuceLibraryCode/include_juce_gui_extra.mm; sourceTree = SOURCE_ROOT; };
+		B4D377205E15EB8E96D8085F /* include_juce_graphics.mm */ /* include_juce_graphics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_graphics.mm; path = ../../JuceLibraryCode/include_juce_graphics.mm; sourceTree = SOURCE_ROOT; };
+		BC98B35B40C93B3031EE3EEE /* include_juce_audio_processors.mm */ /* include_juce_audio_processors.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_processors.mm; path = ../../JuceLibraryCode/include_juce_audio_processors.mm; sourceTree = SOURCE_ROOT; };
+		BCAB2A15E144681B15850322 /* Shared Code */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVBANReceptor.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0A0E9C134890C52EAFA15CD /* include_juce_audio_formats.mm */ /* include_juce_audio_formats.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_formats.mm; path = ../../JuceLibraryCode/include_juce_audio_formats.mm; sourceTree = SOURCE_ROOT; };
+		C3D425A3C34034E9D564AF36 /* Info-AUv3_AppExtension.plist */ /* Info-AUv3_AppExtension.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-AUv3_AppExtension.plist"; path = "Info-AUv3_AppExtension.plist"; sourceTree = SOURCE_ROOT; };
+		C7D8D6789E6198AAF9D606DC /* Info-VST3.plist */ /* Info-VST3.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-VST3.plist"; path = "Info-VST3.plist"; sourceTree = SOURCE_ROOT; };
+		CD50F8FE6AFF955248956A49 /* juce_graphics */ /* juce_graphics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_graphics; path = /usr/share/juce/modules/juce_graphics; sourceTree = "<absolute>"; };
+		CD6CF204768F4A2BD8E28A2F /* include_juce_audio_processors_lv2_libs.cpp */ /* include_juce_audio_processors_lv2_libs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_processors_lv2_libs.cpp; path = ../../JuceLibraryCode/include_juce_audio_processors_lv2_libs.cpp; sourceTree = SOURCE_ROOT; };
+		D39CCB7A5C36894F0C8A0A27 /* PluginProcessor.cpp */ /* PluginProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PluginProcessor.cpp; path = ../../Source/PluginProcessor.cpp; sourceTree = SOURCE_ROOT; };
+		D54B0F036A5A041DC08F9174 /* LV2 Manifest Helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = juce_lv2_helper; sourceTree = BUILT_PRODUCTS_DIR; };
+		D72F9A79338C20C2421FA084 /* PluginEditor.h */ /* PluginEditor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginEditor.h; path = ../../Source/PluginEditor.h; sourceTree = SOURCE_ROOT; };
+		DBF98415FB19ACC85E97C6FB /* Security.framework */ /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E76A4B8D629C800458505381 /* include_juce_audio_plugin_client_AU_1.mm */ /* include_juce_audio_plugin_client_AU_1.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_plugin_client_AU_1.mm; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_AU_1.mm; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04DC2F96392ECA22F7104DBA = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A2692FFD520D13677BBBF00,
+				F8B2966BC6E60510D2EECEEB,
+				7A536771120737279EAF9735,
+				B456166BF69C669817C4D93B,
+				C67A18DB062A495C3F60205D,
+				8F127A925F2EF4DBC781713D,
+				A52242727D65117CED8F5926,
+				441B3F0979AF8DDC6DF165FD,
+				B2376B4118359C8348225153,
+				C999E94F7F692FDE0D50A6F8,
+				4B555B7B3B8B6E9CA1C163BF,
+				8BAA8BB5BC8C4A8E7614FD56,
+				BCACC0A1D31FBBBD7350A072,
+				8ED24FE577FE562897BFC371,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E2E2E090FE0FC236E49EC01 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A2692FFD520D13677BBBF00,
+				F8B2966BC6E60510D2EECEEB,
+				7A536771120737279EAF9735,
+				B456166BF69C669817C4D93B,
+				C67A18DB062A495C3F60205D,
+				8F127A925F2EF4DBC781713D,
+				A52242727D65117CED8F5926,
+				441B3F0979AF8DDC6DF165FD,
+				B2376B4118359C8348225153,
+				C999E94F7F692FDE0D50A6F8,
+				4B555B7B3B8B6E9CA1C163BF,
+				8BAA8BB5BC8C4A8E7614FD56,
+				BCACC0A1D31FBBBD7350A072,
+				8ED24FE577FE562897BFC371,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49DFF94EF48B082D515CDB8B = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C03AB09B0169FF5C2000F9,
+				1A2692FFD520D13677BBBF00,
+				F8B2966BC6E60510D2EECEEB,
+				53CC0E8CE663182F7CD2F5BB,
+				7A536771120737279EAF9735,
+				B456166BF69C669817C4D93B,
+				C67A18DB062A495C3F60205D,
+				8F127A925F2EF4DBC781713D,
+				A52242727D65117CED8F5926,
+				441B3F0979AF8DDC6DF165FD,
+				B2376B4118359C8348225153,
+				C999E94F7F692FDE0D50A6F8,
+				4B555B7B3B8B6E9CA1C163BF,
+				8BAA8BB5BC8C4A8E7614FD56,
+				BCACC0A1D31FBBBD7350A072,
+				8ED24FE577FE562897BFC371,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1BB6839719A040C1148E7B = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A2692FFD520D13677BBBF00,
+				F8B2966BC6E60510D2EECEEB,
+				7A536771120737279EAF9735,
+				B456166BF69C669817C4D93B,
+				C67A18DB062A495C3F60205D,
+				8F127A925F2EF4DBC781713D,
+				A52242727D65117CED8F5926,
+				441B3F0979AF8DDC6DF165FD,
+				B2376B4118359C8348225153,
+				C999E94F7F692FDE0D50A6F8,
+				4B555B7B3B8B6E9CA1C163BF,
+				8BAA8BB5BC8C4A8E7614FD56,
+				BCACC0A1D31FBBBD7350A072,
+				8ED24FE577FE562897BFC371,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C22301B0DC8BD01D667B4603 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A2692FFD520D13677BBBF00,
+				F8B2966BC6E60510D2EECEEB,
+				7A536771120737279EAF9735,
+				B456166BF69C669817C4D93B,
+				C67A18DB062A495C3F60205D,
+				8F127A925F2EF4DBC781713D,
+				A52242727D65117CED8F5926,
+				441B3F0979AF8DDC6DF165FD,
+				B2376B4118359C8348225153,
+				C999E94F7F692FDE0D50A6F8,
+				4B555B7B3B8B6E9CA1C163BF,
+				8BAA8BB5BC8C4A8E7614FD56,
+				BCACC0A1D31FBBBD7350A072,
+				8ED24FE577FE562897BFC371,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD074EF55359D7B7B3549B8E = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A2692FFD520D13677BBBF00,
+				F8B2966BC6E60510D2EECEEB,
+				7A536771120737279EAF9735,
+				B456166BF69C669817C4D93B,
+				C67A18DB062A495C3F60205D,
+				8F127A925F2EF4DBC781713D,
+				A52242727D65117CED8F5926,
+				441B3F0979AF8DDC6DF165FD,
+				B2376B4118359C8348225153,
+				C999E94F7F692FDE0D50A6F8,
+				4B555B7B3B8B6E9CA1C163BF,
+				8BAA8BB5BC8C4A8E7614FD56,
+				BCACC0A1D31FBBBD7350A072,
+				8ED24FE577FE562897BFC371,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7C8125F3B88818C6486B539 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C03AB09B0169FF5C2000F9,
+				1A2692FFD520D13677BBBF00,
+				F8B2966BC6E60510D2EECEEB,
+				7A536771120737279EAF9735,
+				B456166BF69C669817C4D93B,
+				C67A18DB062A495C3F60205D,
+				8F127A925F2EF4DBC781713D,
+				A52242727D65117CED8F5926,
+				441B3F0979AF8DDC6DF165FD,
+				B2376B4118359C8348225153,
+				C999E94F7F692FDE0D50A6F8,
+				4B555B7B3B8B6E9CA1C163BF,
+				8BAA8BB5BC8C4A8E7614FD56,
+				BCACC0A1D31FBBBD7350A072,
+				8ED24FE577FE562897BFC371,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		098943B5B587813175092EC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60F35F12C52414BB09738E89,
+				3B12D41FF5F07FA55FEBBBA4,
+				9A7C3F1BDA50E26BEE96717C,
+				3D5B08E0DA262C9572677881,
+				AB4F4C18FA1A5411534C0F49,
+				1ABBBA64BE65A02D09186254,
+				BCAB2A15E144681B15850322,
+				D54B0F036A5A041DC08F9174,
+				32DB5CC268D9C3BB9B34AC06,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26FAFB78F9DB7225BB5387D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7C5966DAC70484F7B4C50DED,
+				C7D8D6789E6198AAF9D606DC,
+				88BF051417458203CFC172A7,
+				C3D425A3C34034E9D564AF36,
+				33DDA3CC818DEB7A89EF7536,
+				B1D45E6149E9B6C762A3C9FD,
+				33CF231A1D48F86E1A34A289,
+				34DD7D628D74FB6D683DCE95,
+				98C69B1D14D43892EE8DA7D6,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3DA2DCC50890E1B1D6165646 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D39CCB7A5C36894F0C8A0A27,
+				3DC839E0C5CFF037BD125838,
+				A11C53AD21664F675A259926,
+				D72F9A79338C20C2421FA084,
+				3AA3F09DBE0954F371355F3C,
+				6725A1C7369DB647012EFA2E,
+				14F50373BA0B8FC0562FC912,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		6A49C194C5596EF8627BA9F3 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B8C2C45DCFDDB413E35DD8B5,
+				6BDD234199CA49EED9E1B44D,
+				F8264DBF1AC083B3799E293D,
+				26FAFB78F9DB7225BB5387D2,
+				759E5B0457991E8A9C04AB92,
+				098943B5B587813175092EC6,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		6BDD234199CA49EED9E1B44D /* JUCE Modules */ = {
+			isa = PBXGroup;
+			children = (
+				28F685414FDBAB112FECEBB2,
+				049E5EA805F0BA755D9DAB06,
+				9E805A2643BB119CCCDEE073,
+				917089D74EB4014EB34F6421,
+				A9BA90C6D4E5CC9456B715A7,
+				33C4F8CF8D14E04E68B47EB2,
+				B247DFB6FD89A3C626BE7C1E,
+				8A3EA94119676FC306A41D50,
+				1C4DABD3DBBEC08CB09A81EF,
+				CD50F8FE6AFF955248956A49,
+				9A455A742E1BEF6575597636,
+				290CC3FB9AE6069530B929C4,
+			);
+			name = "JUCE Modules";
+			sourceTree = "<group>";
+		};
+		759E5B0457991E8A9C04AB92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2B6C969CA324F3083F17348,
+				2FE6A1607F1863A8C16432A8,
+				ACC8C01DA29A9EA97E97D3F6,
+				1CC94D6ECC1EFBCA90369285,
+				8667A86F095DC15C7D610E65,
+				4DCF8B2378BE5B119F8C87A3,
+				0780CF764912C2225FC0AB34,
+				95CEC054B1DFC99C14A230B0,
+				802B6CECD7A2B0EBD129AE84,
+				3B19E01879B59957AEC2734E,
+				9111D0F746F41C4B739758DD,
+				792483367710C7C5ED3836AD,
+				DBF98415FB19ACC85E97C6FB,
+				8DF26931859F093FAC4C6718,
+				67CD7A44287F088645DEBEF3,
+				ABF4D2D8C4D3E120AA4933BD,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8C2C45DCFDDB413E35DD8B5 /* VBANReceptor */ = {
+			isa = PBXGroup;
+			children = (
+				3DA2DCC50890E1B1D6165646,
+			);
+			name = VBANReceptor;
+			sourceTree = "<group>";
+		};
+		F8264DBF1AC083B3799E293D /* JUCE Library Code */ = {
+			isa = PBXGroup;
+			children = (
+				8A4F05CF0685E83CA5CF041D,
+				7031EB2DB5981A531F86E4D9,
+				C0A0E9C134890C52EAFA15CD,
+				605306D3516A1797E2CAB8EC,
+				E76A4B8D629C800458505381,
+				85A0193B89111066521FD224,
+				939A0AE78FE74BA1998CF044,
+				02DFE86D1C5E0D630B06ED3B,
+				8415FAA325C5C3353C40EF61,
+				1427D03A800D00ED14D7F063,
+				06CFDFFB0E0F56BF4DAB6591,
+				BC98B35B40C93B3031EE3EEE,
+				2F8B695E4685D33167AF6E10,
+				CD6CF204768F4A2BD8E28A2F,
+				424C422278FA3B0AEB9D8B38,
+				AD11F5477C791B75C60781E6,
+				A914580E968252C52B7076A6,
+				05A68CC4FE5F10AEAF334D6A,
+				B4D377205E15EB8E96D8085F,
+				72016FAACBC9CB0E794D4D3E,
+				B4C1DA587C7E13D198A3054B,
+				701C9E87A813D7A7B339931B,
+				28162684F106A373720AF414,
+				6BE9108516638A7ADCF9F2D5,
+			);
+			name = "JUCE Library Code";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6119A73E659F297844098B1C /* VBANReceptor - AU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8E6553D117C70512ECA4310;
+			buildPhases = (
+				3F4023C0793C95693A557918,
+				4298C031AEEEE78FCFC2B4F6,
+				E7C8125F3B88818C6486B539,
+				4DAFA6613D56DB6EC4C7528F,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C97148EBC24FA85EF15BF38D,
+			);
+			name = "VBANReceptor - AU";
+			productName = VBANReceptor;
+			productReference = 9A7C3F1BDA50E26BEE96717C;
+			productType = "com.apple.product-type.bundle";
+		};
+		78C552B77DBCEC9B24E626EE /* VBANReceptor - VST */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBD2B77AA65C3B296ECF53F6;
+			buildPhases = (
+				D125797F70421B46B4AFFC9C,
+				AD89008A87C4C31094179260,
+				CD074EF55359D7B7B3549B8E,
+				88F0A6A681FD4F21BF3C0582,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F155182075111D2F0073F6CE,
+			);
+			name = "VBANReceptor - VST";
+			productName = VBANReceptor;
+			productReference = 60F35F12C52414BB09738E89;
+			productType = "com.apple.product-type.bundle";
+		};
+		8AD31AF845E256CFCE89259A /* VBANReceptor - LV2 Plugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A5FD8ECE1DB07E2E9EBF1F7;
+			buildPhases = (
+				45E5E760B0B5EA6BBFAC861B,
+				A0733137ADECC70B311224EC,
+				C22301B0DC8BD01D667B4603,
+				7552AD1055DD1C7329073F46,
+				5E31EDFB42B85AAAF800701D,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1830F87D72F6545DDFAE8C8A,
+				9CD913C2C9C196378DC9A82A,
+			);
+			name = "VBANReceptor - LV2 Plugin";
+			productName = VBANReceptor;
+			productReference = 1ABBBA64BE65A02D09186254;
+			productType = "com.apple.product-type.tool";
+		};
+		900F43916517E6A00EA3F7BB /* VBANReceptor - VST3 Manifest Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FADAC5405468B2F1DFFD4C22;
+			buildPhases = (
+				9CE313240C2778973C8E1D06,
+				5B1BB6839719A040C1148E7B,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VBANReceptor - VST3 Manifest Helper";
+			productName = VBANReceptor;
+			productReference = 32DB5CC268D9C3BB9B34AC06;
+			productType = "com.apple.product-type.tool";
+		};
+		A0887C0C25132F3533B5B7E3 /* VBANReceptor - VST3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E631F02B40FD88DD2E032F0;
+			buildPhases = (
+				779B0BDEF228413890B626D4,
+				0CD3625688405B1E310EFF27,
+				04DC2F96392ECA22F7104DBA,
+				33DE20E0D3105A3117863DC8,
+				02EACFA48F1D90E0B8075DFE,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92121F437B4AA57EA38707DE,
+				7154E4C968F3035154035E9B,
+			);
+			name = "VBANReceptor - VST3";
+			productName = VBANReceptor;
+			productReference = 3B12D41FF5F07FA55FEBBBA4;
+			productType = "com.apple.product-type.bundle";
+		};
+		B17A9552589DF941FC154A2E /* VBANReceptor - AUv3 AppExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A76D7CC7354BD6A3E50D83E;
+			buildPhases = (
+				2BFAB871054E25377B11DBE4,
+				2A95D9DEF2C4286814A609AE,
+				49DFF94EF48B082D515CDB8B,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC63C72272A97A9F0843E2DD,
+			);
+			name = "VBANReceptor - AUv3 AppExtension";
+			productName = VBANReceptor;
+			productReference = 3D5B08E0DA262C9572677881;
+			productType = "com.apple.product-type.app-extension";
+		};
+		D50AD3E80F5FAE63A988641F /* VBANReceptor - Standalone Plugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDC9115BB787DDA535A7B8AE;
+			buildPhases = (
+				3E2CF5A4356582C03AC8D4BD,
+				B514F83CB48F76310A776E4A,
+				3E2E2E090FE0FC236E49EC01,
+				1089A7D03695BCB0E173E370,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFFA5A82042513E862D9BAD7,
+				0AB64CBABF23CE25ADD24852,
+			);
+			name = "VBANReceptor - Standalone Plugin";
+			productName = VBANReceptor;
+			productReference = AB4F4C18FA1A5411534C0F49;
+			productType = "com.apple.product-type.application";
+		};
+		DB559F093FE785FA75CCB0DD /* VBANReceptor - LV2 Manifest Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 714DD328DC05F2F22A2EA49F;
+			buildPhases = (
+				7ECD1A0A5B47B481963E7B87,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VBANReceptor - LV2 Manifest Helper";
+			productName = VBANReceptor;
+			productReference = D54B0F036A5A041DC08F9174;
+			productType = "com.apple.product-type.tool";
+		};
+		F2966B0C2D7A014FBC3931D7 /* VBANReceptor - Shared Code */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EDD29FD21162F4A46BABB2B;
+			buildPhases = (
+				411419F3D174247DBD4C3067,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VBANReceptor - Shared Code";
+			productName = VBANReceptor;
+			productReference = BCAB2A15E144681B15850322;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		479E98083B80C0E949050CDE = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1340;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					2919D301855F6F3D8B90B8CA = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					6119A73E659F297844098B1C = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					78C552B77DBCEC9B24E626EE = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					8AD31AF845E256CFCE89259A = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					900F43916517E6A00EA3F7BB = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					A0887C0C25132F3533B5B7E3 = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					B17A9552589DF941FC154A2E = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					D50AD3E80F5FAE63A988641F = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					DB559F093FE785FA75CCB0DD = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					F2966B0C2D7A014FBC3931D7 = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 1262DC2FB1DBD0664BA39CE6;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6A49C194C5596EF8627BA9F3;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2919D301855F6F3D8B90B8CA,
+				78C552B77DBCEC9B24E626EE,
+				A0887C0C25132F3533B5B7E3,
+				6119A73E659F297844098B1C,
+				B17A9552589DF941FC154A2E,
+				D50AD3E80F5FAE63A988641F,
+				8AD31AF845E256CFCE89259A,
+				F2966B0C2D7A014FBC3931D7,
+				DB559F093FE785FA75CCB0DD,
+				900F43916517E6A00EA3F7BB,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BFAB871054E25377B11DBE4 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA9DB5B04005AF4C74D81AE,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E2CF5A4356582C03AC8D4BD = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA9DB5B04005AF4C74D81AE,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F4023C0793C95693A557918 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA9DB5B04005AF4C74D81AE,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45E5E760B0B5EA6BBFAC861B = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA9DB5B04005AF4C74D81AE,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		779B0BDEF228413890B626D4 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA9DB5B04005AF4C74D81AE,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D125797F70421B46B4AFFC9C = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA9DB5B04005AF4C74D81AE,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02EACFA48F1D90E0B8075DFE /* Plugin Copy Step */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Plugin Copy Step";
+			alwaysOutOfDate = 1;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\n\nif [[ \"${CONFIGURATION}\" == \"Debug\" ]]; then\n  destinationPlugin=\"${HOME}/Library/Audio/Plug-Ins/VST3//$(basename \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\")\"\n  echo Running rm -rf \\\"${destinationPlugin}\\\"\n  rm -rf \"${destinationPlugin}\"\n  echo Running ditto \\\"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\\\" \\\"${destinationPlugin}\\\"\n  ditto \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \"${destinationPlugin}\"\n\n  if [[ -n \"${EXPANDED_CODE_SIGN_IDENTITY-}\" ]]; then\n    if [[ -n \"${CODE_SIGN_ENTITLEMENTS-}\" ]]; then\n      entitlementsArg=(--entitlements \"${CODE_SIGN_ENTITLEMENTS}\")\n    fi\n\n    echo Signing Identity: \\\"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\\\"\n    echo Running codesign --verbose=4 --force --sign \\\"${EXPANDED_CODE_SIGN_IDENTITY}\\\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \\\"${HOME}/Library/Audio/Plug-Ins/VST3//${FULL_PRODUCT_NAME}\\\"\n    codesign --verbose=4 --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \"${HOME}/Library/Audio/Plug-Ins/VST3//${FULL_PRODUCT_NAME}\"\n  fi\nfi\n\nif [[ \"${CONFIGURATION}\" == \"Release\" ]]; then\n  destinationPlugin=\"${HOME}/Library/Audio/Plug-Ins/VST3//$(basename \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\")\"\n  echo Running rm -rf \\\"${destinationPlugin}\\\"\n  rm -rf \"${destinationPlugin}\"\n  echo Running ditto \\\"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\\\" \\\"${destinationPlugin}\\\"\n  ditto \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \"${destinationPlugin}\"\n\n  if [[ -n \"${EXPANDED_CODE_SIGN_IDENTITY-}\" ]]; then\n    if [[ -n \"${CODE_SIGN_ENTITLEMENTS-}\" ]]; then\n      entitlementsArg=(--entitlements \"${CODE_SIGN_ENTITLEMENTS}\")\n    fi\n\n    echo Signing Identity: \\\"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\\\"\n    echo Running codesign --verbose=4 --force --sign \\\"${EXPANDED_CODE_SIGN_IDENTITY}\\\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \\\"${HOME}/Library/Audio/Plug-Ins/VST3//${FULL_PRODUCT_NAME}\\\"\n    codesign --verbose=4 --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \"${HOME}/Library/Audio/Plug-Ins/VST3//${FULL_PRODUCT_NAME}\"\n  fi\nfi\n";
+		};
+		33DE20E0D3105A3117863DC8 /* Update manifest */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Update manifest";
+			alwaysOutOfDate = 1;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\n\necho Running codesign --verbose=4 --force --sign - \\\"${CONFIGURATION_BUILD_DIR}/${FULL_PRODUCT_NAME}\\\"\ncodesign --verbose=4 --force --sign - \"${CONFIGURATION_BUILD_DIR}/${FULL_PRODUCT_NAME}\"\n\necho Running \\\"${CONFIGURATION_BUILD_DIR}/juce_vst3_helper\\\" -create -version \\\"1.0.0\\\" -path \\\"${CONFIGURATION_BUILD_DIR}/${FULL_PRODUCT_NAME}\\\" -output \\\"${CONFIGURATION_BUILD_DIR}/${FULL_PRODUCT_NAME}/Contents/Resources/moduleinfo.json\\\"\n\"${CONFIGURATION_BUILD_DIR}/juce_vst3_helper\" -create -version \"1.0.0\" -path \"${CONFIGURATION_BUILD_DIR}/${FULL_PRODUCT_NAME}\" -output \"${CONFIGURATION_BUILD_DIR}/${FULL_PRODUCT_NAME}/Contents/Resources/moduleinfo.json\"\n";
+		};
+		4DAFA6613D56DB6EC4C7528F /* Plugin Copy Step */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Plugin Copy Step";
+			alwaysOutOfDate = 1;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\n\nif [[ \"${CONFIGURATION}\" == \"Debug\" ]]; then\n  destinationPlugin=\"${HOME}/Library/Audio/Plug-Ins/Components//$(basename \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\")\"\n  echo Running rm -rf \\\"${destinationPlugin}\\\"\n  rm -rf \"${destinationPlugin}\"\n  echo Running ditto \\\"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\\\" \\\"${destinationPlugin}\\\"\n  ditto \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \"${destinationPlugin}\"\n\n  if [[ -n \"${EXPANDED_CODE_SIGN_IDENTITY-}\" ]]; then\n    if [[ -n \"${CODE_SIGN_ENTITLEMENTS-}\" ]]; then\n      entitlementsArg=(--entitlements \"${CODE_SIGN_ENTITLEMENTS}\")\n    fi\n\n    echo Signing Identity: \\\"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\\\"\n    echo Running codesign --verbose=4 --force --sign \\\"${EXPANDED_CODE_SIGN_IDENTITY}\\\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \\\"${HOME}/Library/Audio/Plug-Ins/Components//${FULL_PRODUCT_NAME}\\\"\n    codesign --verbose=4 --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \"${HOME}/Library/Audio/Plug-Ins/Components//${FULL_PRODUCT_NAME}\"\n  fi\nfi\n\nif [[ \"${CONFIGURATION}\" == \"Release\" ]]; then\n  destinationPlugin=\"${HOME}/Library/Audio/Plug-Ins/Components//$(basename \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\")\"\n  echo Running rm -rf \\\"${destinationPlugin}\\\"\n  rm -rf \"${destinationPlugin}\"\n  echo Running ditto \\\"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\\\" \\\"${destinationPlugin}\\\"\n  ditto \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \"${destinationPlugin}\"\n\n  if [[ -n \"${EXPANDED_CODE_SIGN_IDENTITY-}\" ]]; then\n    if [[ -n \"${CODE_SIGN_ENTITLEMENTS-}\" ]]; then\n      entitlementsArg=(--entitlements \"${CODE_SIGN_ENTITLEMENTS}\")\n    fi\n\n    echo Signing Identity: \\\"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\\\"\n    echo Running codesign --verbose=4 --force --sign \\\"${EXPANDED_CODE_SIGN_IDENTITY}\\\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \\\"${HOME}/Library/Audio/Plug-Ins/Components//${FULL_PRODUCT_NAME}\\\"\n    codesign --verbose=4 --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \"${HOME}/Library/Audio/Plug-Ins/Components//${FULL_PRODUCT_NAME}\"\n  fi\nfi\n";
+		};
+		5E31EDFB42B85AAAF800701D /* Plugin Copy Step */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Plugin Copy Step";
+			alwaysOutOfDate = 1;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\n\nif [[ \"${CONFIGURATION}\" == \"Debug\" ]]; then\n  destinationPlugin=\"${HOME}/Library/Audio/Plug-Ins/LV2//$(basename \"${TARGET_BUILD_DIR}\")\"\n  echo Running rm -rf \\\"${destinationPlugin}\\\"\n  rm -rf \"${destinationPlugin}\"\n  echo Running ditto \\\"${TARGET_BUILD_DIR}\\\" \\\"${destinationPlugin}\\\"\n  ditto \"${TARGET_BUILD_DIR}\" \"${destinationPlugin}\"\n\n  if [[ -n \"${EXPANDED_CODE_SIGN_IDENTITY-}\" ]]; then\n    if [[ -n \"${CODE_SIGN_ENTITLEMENTS-}\" ]]; then\n      entitlementsArg=(--entitlements \"${CODE_SIGN_ENTITLEMENTS}\")\n    fi\n\n    echo Signing Identity: \\\"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\\\"\n    echo Running codesign --verbose=4 --force --sign \\\"${EXPANDED_CODE_SIGN_IDENTITY}\\\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \\\"${HOME}/Library/Audio/Plug-Ins/LV2//$(basename \\\"${TARGET_BUILD_DIR}\\\")/${FULL_PRODUCT_NAME}\\\"\n    codesign --verbose=4 --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \"${HOME}/Library/Audio/Plug-Ins/LV2//$(basename \"${TARGET_BUILD_DIR}\")/${FULL_PRODUCT_NAME}\"\n  fi\nfi\n\nif [[ \"${CONFIGURATION}\" == \"Release\" ]]; then\n  destinationPlugin=\"${HOME}/Library/Audio/Plug-Ins/LV2//$(basename \"${TARGET_BUILD_DIR}\")\"\n  echo Running rm -rf \\\"${destinationPlugin}\\\"\n  rm -rf \"${destinationPlugin}\"\n  echo Running ditto \\\"${TARGET_BUILD_DIR}\\\" \\\"${destinationPlugin}\\\"\n  ditto \"${TARGET_BUILD_DIR}\" \"${destinationPlugin}\"\n\n  if [[ -n \"${EXPANDED_CODE_SIGN_IDENTITY-}\" ]]; then\n    if [[ -n \"${CODE_SIGN_ENTITLEMENTS-}\" ]]; then\n      entitlementsArg=(--entitlements \"${CODE_SIGN_ENTITLEMENTS}\")\n    fi\n\n    echo Signing Identity: \\\"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\\\"\n    echo Running codesign --verbose=4 --force --sign \\\"${EXPANDED_CODE_SIGN_IDENTITY}\\\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \\\"${HOME}/Library/Audio/Plug-Ins/LV2//$(basename \\\"${TARGET_BUILD_DIR}\\\")/${FULL_PRODUCT_NAME}\\\"\n    codesign --verbose=4 --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \"${HOME}/Library/Audio/Plug-Ins/LV2//$(basename \"${TARGET_BUILD_DIR}\")/${FULL_PRODUCT_NAME}\"\n  fi\nfi\n";
+		};
+		7552AD1055DD1C7329073F46 /* Update manifest */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Update manifest";
+			alwaysOutOfDate = 1;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\n\necho Running codesign --verbose=4 --force --sign - \\\"${CONFIGURATION_BUILD_DIR}/${FULL_PRODUCT_NAME}\\\"\ncodesign --verbose=4 --force --sign - \"${CONFIGURATION_BUILD_DIR}/${FULL_PRODUCT_NAME}\"\n\necho Running \\\"${CONFIGURATION_BUILD_DIR}/../juce_lv2_helper\\\" \\\"${CONFIGURATION_BUILD_DIR}/${FULL_PRODUCT_NAME}\\\"\n\"${CONFIGURATION_BUILD_DIR}/../juce_lv2_helper\" \"${CONFIGURATION_BUILD_DIR}/${FULL_PRODUCT_NAME}\"\n";
+		};
+		88F0A6A681FD4F21BF3C0582 /* Plugin Copy Step */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Plugin Copy Step";
+			alwaysOutOfDate = 1;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\n\nif [[ \"${CONFIGURATION}\" == \"Debug\" ]]; then\n  destinationPlugin=\"${HOME}/Library/Audio/Plug-Ins/VST//$(basename \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\")\"\n  echo Running rm -rf \\\"${destinationPlugin}\\\"\n  rm -rf \"${destinationPlugin}\"\n  echo Running ditto \\\"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\\\" \\\"${destinationPlugin}\\\"\n  ditto \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \"${destinationPlugin}\"\n\n  if [[ -n \"${EXPANDED_CODE_SIGN_IDENTITY-}\" ]]; then\n    if [[ -n \"${CODE_SIGN_ENTITLEMENTS-}\" ]]; then\n      entitlementsArg=(--entitlements \"${CODE_SIGN_ENTITLEMENTS}\")\n    fi\n\n    echo Signing Identity: \\\"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\\\"\n    echo Running codesign --verbose=4 --force --sign \\\"${EXPANDED_CODE_SIGN_IDENTITY}\\\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \\\"${HOME}/Library/Audio/Plug-Ins/VST//${FULL_PRODUCT_NAME}\\\"\n    codesign --verbose=4 --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \"${HOME}/Library/Audio/Plug-Ins/VST//${FULL_PRODUCT_NAME}\"\n  fi\nfi\n\nif [[ \"${CONFIGURATION}\" == \"Release\" ]]; then\n  destinationPlugin=\"${HOME}/Library/Audio/Plug-Ins/VST//$(basename \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\")\"\n  echo Running rm -rf \\\"${destinationPlugin}\\\"\n  rm -rf \"${destinationPlugin}\"\n  echo Running ditto \\\"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\\\" \\\"${destinationPlugin}\\\"\n  ditto \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \"${destinationPlugin}\"\n\n  if [[ -n \"${EXPANDED_CODE_SIGN_IDENTITY-}\" ]]; then\n    if [[ -n \"${CODE_SIGN_ENTITLEMENTS-}\" ]]; then\n      entitlementsArg=(--entitlements \"${CODE_SIGN_ENTITLEMENTS}\")\n    fi\n\n    echo Signing Identity: \\\"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\\\"\n    echo Running codesign --verbose=4 --force --sign \\\"${EXPANDED_CODE_SIGN_IDENTITY}\\\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \\\"${HOME}/Library/Audio/Plug-Ins/VST//${FULL_PRODUCT_NAME}\\\"\n    codesign --verbose=4 --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \"${HOME}/Library/Audio/Plug-Ins/VST//${FULL_PRODUCT_NAME}\"\n  fi\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CD3625688405B1E310EFF27 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9555DA5CB88D02B45DBF9FC,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A95D9DEF2C4286814A609AE = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A260C3A848013275669CBA84,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		411419F3D174247DBD4C3067 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				147FE9A6FC6B56AD6281329A,
+				6549AEAA92A0C67C1BEE2CA5,
+				4150FFA16F64025BF67E58DB,
+				566E09B421229E2AB0D63AB8,
+				4782BE85777E87F73AE90AFF,
+				CC4A00B55706C6EF57F5C6EE,
+				658FD6135CAE083BAD3B3A00,
+				92946AE686AD8EBFE1BC2408,
+				58971906DD0CC2AD9D1448CD,
+				5B3DE1B2EBAB76E261A87475,
+				7CE901B1C22091001B295D41,
+				7CDD71133C275665038E6E04,
+				19D3645EE2B3583494F9FA01,
+				B007FF911396AD1F81C41EB5,
+				4C146C57C0B32458CDA87B40,
+				37BBCB6CF85F9D04245CE383,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4298C031AEEEE78FCFC2B4F6 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				797044D42D7BB4A1F265901A,
+				C6E97C95A2A8B0D5F5280DA8,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7ECD1A0A5B47B481963E7B87 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E53542167B8A8FAAB8DD3C9,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CE313240C2778973C8E1D06 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				043954E823C506747B805F7B,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0733137ADECC70B311224EC = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78989A6AF37971BCE80A4887,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD89008A87C4C31094179260 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA9D54F3CE0BD2DFB21FAEF8,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B514F83CB48F76310A776E4A = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A3D73440E879D6271AF61D3,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03B2735DF5B741C7A2F3DFA0 = {
+			isa = PBXTargetDependency;
+			target = 900F43916517E6A00EA3F7BB;
+		};
+		0AB64CBABF23CE25ADD24852 = {
+			isa = PBXTargetDependency;
+			target = B17A9552589DF941FC154A2E;
+		};
+		1830F87D72F6545DDFAE8C8A = {
+			isa = PBXTargetDependency;
+			target = F2966B0C2D7A014FBC3931D7;
+		};
+		2DA7A56B103836BDB3E1784C = {
+			isa = PBXTargetDependency;
+			target = F2966B0C2D7A014FBC3931D7;
+		};
+		45A2841B4F9BFC86174A06E0 = {
+			isa = PBXTargetDependency;
+			target = 6119A73E659F297844098B1C;
+		};
+		6240EF880B8CFE4259F52D99 = {
+			isa = PBXTargetDependency;
+			target = B17A9552589DF941FC154A2E;
+		};
+		7154E4C968F3035154035E9B = {
+			isa = PBXTargetDependency;
+			target = 900F43916517E6A00EA3F7BB;
+		};
+		741CCB61CF91DA90C91A7C53 = {
+			isa = PBXTargetDependency;
+			target = D50AD3E80F5FAE63A988641F;
+		};
+		92121F437B4AA57EA38707DE = {
+			isa = PBXTargetDependency;
+			target = F2966B0C2D7A014FBC3931D7;
+		};
+		9CD913C2C9C196378DC9A82A = {
+			isa = PBXTargetDependency;
+			target = DB559F093FE785FA75CCB0DD;
+		};
+		9E5E88A76438B3060A80B249 = {
+			isa = PBXTargetDependency;
+			target = 78C552B77DBCEC9B24E626EE;
+		};
+		AD790B50BB6BE23546475D9C = {
+			isa = PBXTargetDependency;
+			target = 8AD31AF845E256CFCE89259A;
+		};
+		AFFA5A82042513E862D9BAD7 = {
+			isa = PBXTargetDependency;
+			target = F2966B0C2D7A014FBC3931D7;
+		};
+		BC63C72272A97A9F0843E2DD = {
+			isa = PBXTargetDependency;
+			target = F2966B0C2D7A014FBC3931D7;
+		};
+		BDAA4C065428939AE308B772 = {
+			isa = PBXTargetDependency;
+			target = A0887C0C25132F3533B5B7E3;
+		};
+		C14F7F9D1AA86D3861DEBEC1 = {
+			isa = PBXTargetDependency;
+			target = DB559F093FE785FA75CCB0DD;
+		};
+		C97148EBC24FA85EF15BF38D = {
+			isa = PBXTargetDependency;
+			target = F2966B0C2D7A014FBC3931D7;
+		};
+		F155182075111D2F0073F6CE = {
+			isa = PBXTargetDependency;
+			target = F2966B0C2D7A014FBC3931D7;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00FBF44568F0B2B6BF4A232A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=1",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-VST3.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST3/";
+				LIBRARY_STYLE = Bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-bundle -lVBANReceptor";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor;
+				PRODUCT_NAME = "VBANReceptor";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+				WRAPPER_EXTENSION = vst3;
+			};
+			name = Debug;
+		};
+		01EA3425BCED2E185812409E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=1",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-VST.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST/";
+				LIBRARY_STYLE = Bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-bundle -lVBANReceptor";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor;
+				PRODUCT_NAME = "VBANReceptor";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+				WRAPPER_EXTENSION = vst;
+			};
+			name = Debug;
+		};
+		2987F7BF0310E79DE1A0E8E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)/VBAN Receptor (2 channels).lv2";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=1",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-LV2_Plugin.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/LV2/";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/build/$(CONFIGURATION)\"",
+				);
+				LIBRARY_STYLE = Bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-bundle -lVBANReceptor";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor;
+				PRODUCT_NAME = "VBANReceptor";
+				SKIP_INSTALL = YES;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+				WRAPPER_EXTENSION = so;
+			};
+			name = Debug;
+		};
+		2CB7754CFC27491D2F750CFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=1",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-AU.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
+				LIBRARY_STYLE = Bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-bundle -lVBANReceptor";
+				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -d arm64_$arm64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor;
+				PRODUCT_NAME = "VBANReceptor";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+				WRAPPER_EXTENSION = component;
+			};
+			name = Debug;
+		};
+		423F8D57118BB0D114E9FC3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-LV2_Manifest_Helper.plist;
+				INFOPLIST_PREPROCESS = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor;
+				PRODUCT_NAME = "juce_lv2_helper";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Debug;
+		};
+		460783D54D9D45D6A98B06D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)/VBAN Receptor (2 channels).lv2";
+				DEAD_CODE_STRIPPING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=1",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-LV2_Plugin.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/LV2/";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/build/$(CONFIGURATION)\"",
+				);
+				LIBRARY_STYLE = Bundle;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-bundle -lVBANReceptor";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor;
+				PRODUCT_NAME = "VBANReceptor";
+				SKIP_INSTALL = YES;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+				WRAPPER_EXTENSION = so;
+			};
+			name = Release;
+		};
+		4EEBAB5906AF5B6CFA9568F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=1",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-VST.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST/";
+				LIBRARY_STYLE = Bundle;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-bundle -lVBANReceptor";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor;
+				PRODUCT_NAME = "VBANReceptor";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+				WRAPPER_EXTENSION = vst;
+			};
+			name = Release;
+		};
+		5BBE2CF1238FF0180052C44A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_ENTITLEMENTS = "AUv3_AppExtension.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=1",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-AUv3_AppExtension.plist;
+				INFOPLIST_PREPROCESS = NO;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-lVBANReceptor";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor.VBANReceptorAUv3;
+				PRODUCT_NAME = "VBANReceptor";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Release;
+		};
+		6554314783C044397D5463C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=1",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-AU.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
+				LIBRARY_STYLE = Bundle;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-bundle -lVBANReceptor";
+				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -d arm64_$arm64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor;
+				PRODUCT_NAME = "VBANReceptor";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+				WRAPPER_EXTENSION = component;
+			};
+			name = Release;
+		};
+		7D0BDC5A0D96639E6CCF4DA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-VST3_Manifest_Helper.plist;
+				INFOPLIST_PREPROCESS = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor;
+				PRODUCT_NAME = "juce_vst3_helper";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Debug;
+		};
+		818081F601C5DA5ACD7D79C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-VST3_Manifest_Helper.plist;
+				INFOPLIST_PREPROCESS = NO;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor;
+				PRODUCT_NAME = "juce_vst3_helper";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Release;
+		};
+		84FF1A5E52157A8F9BE21B2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-LV2_Manifest_Helper.plist;
+				INFOPLIST_PREPROCESS = NO;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor;
+				PRODUCT_NAME = "juce_lv2_helper";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Release;
+		};
+		93DC18461023D053D45803BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=1",
+					"JucePlugin_Build_VST3=1",
+					"JucePlugin_Build_AU=1",
+					"JucePlugin_Build_AUv3=1",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=1",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=1",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+					"JUCE_SHARED_CODE=1",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor;
+				PRODUCT_NAME = "VBANReceptor";
+				SKIP_INSTALL = YES;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Release;
+		};
+		9B4E52F0638679FAC08D326C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CODE_SIGN_FLAGS = --timestamp;
+				PRODUCT_NAME = "VBANReceptor";
+				SDKROOT = macosx;
+				WARNING_CFLAGS = "-Wreorder";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		A7641A2A68C10AE7461FC51C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		ACD1762AFA15616D29FBCB66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CODE_SIGN_FLAGS = --timestamp;
+				PRODUCT_NAME = "VBANReceptor";
+				SDKROOT = macosx;
+				WARNING_CFLAGS = "-Wreorder";
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		BC976B3EA228F739852A59E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_ENTITLEMENTS = "AUv3_AppExtension.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=1",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-AUv3_AppExtension.plist;
+				INFOPLIST_PREPROCESS = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-lVBANReceptor";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor.VBANReceptorAUv3;
+				PRODUCT_NAME = "VBANReceptor";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Debug;
+		};
+		DDE829EB57FA22B8735C23A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=1",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-Standalone_Plugin.plist;
+				INFOPLIST_PREPROCESS = NO;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-lVBANReceptor";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor;
+				PRODUCT_NAME = "VBANReceptor";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Release;
+		};
+		DDEB300DFD57C48F17BAEDC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=1",
+					"JucePlugin_Build_VST3=1",
+					"JucePlugin_Build_AU=1",
+					"JucePlugin_Build_AUv3=1",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=1",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=1",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+					"JUCE_SHARED_CODE=1",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor;
+				PRODUCT_NAME = "VBANReceptor";
+				SKIP_INSTALL = YES;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Debug;
+		};
+		F35CD5B29A6C55FBE1E61C83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=1",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-Standalone_Plugin.plist;
+				INFOPLIST_PREPROCESS = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-lVBANReceptor";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor;
+				PRODUCT_NAME = "VBANReceptor";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Debug;
+		};
+		F3C6168ADDD35465274A0F2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x7000c",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=1",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_Desc=\\\"VBANReceptor\\\"",
+					"JucePlugin_Manufacturer=\\\"billy_the_hippo\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"www.yourcompany.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x46766263",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=0",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx|Network|Tools\\\"",
+					"JucePlugin_AUMainType=\\'aufx\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=VBANReceptorAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"VBANReceptorAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXIdentifier=com.yourcompany.VBANReceptor",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757278",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"billy_the_hippo:\\ VBAN\\ Receptor\\ (2\\ channels)\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.yourcompany.VBANReceptor.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.yourcompany.VBANReceptor.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/",
+					"/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"/usr/share/juce/modules",
+					"/usr/share/juce/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-VST3.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST3/";
+				LIBRARY_STYLE = Bundle;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "/usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lilv /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sratom /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord/src /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/sord /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/serd /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/lv2 /usr/share/juce/modules/juce_audio_processors/format_types/LV2_SDK/ /usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode /usr/share/juce/modules /usr/share/juce/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-bundle -lVBANReceptor";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.VBANReceptor;
+				PRODUCT_NAME = "VBANReceptor";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+				WRAPPER_EXTENSION = vst3;
+			};
+			name = Release;
+		};
+		F4A63FCB454EB30A714A1D43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A76D7CC7354BD6A3E50D83E = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC976B3EA228F739852A59E7,
+				5BBE2CF1238FF0180052C44A,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1262DC2FB1DBD0664BA39CE6 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B4E52F0638679FAC08D326C,
+				ACD1762AFA15616D29FBCB66,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4A5FD8ECE1DB07E2E9EBF1F7 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2987F7BF0310E79DE1A0E8E3,
+				460783D54D9D45D6A98B06D6,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5E631F02B40FD88DD2E032F0 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00FBF44568F0B2B6BF4A232A,
+				F3C6168ADDD35465274A0F2A,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5EDD29FD21162F4A46BABB2B = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDEB300DFD57C48F17BAEDC5,
+				93DC18461023D053D45803BB,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		714DD328DC05F2F22A2EA49F = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				423F8D57118BB0D114E9FC3A,
+				84FF1A5E52157A8F9BE21B2A,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BBD2B77AA65C3B296ECF53F6 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01EA3425BCED2E185812409E,
+				4EEBAB5906AF5B6CFA9568F8,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DF4864668C764408A22B7386 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7641A2A68C10AE7461FC51C,
+				F4A63FCB454EB30A714A1D43,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F8E6553D117C70512ECA4310 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CB7754CFC27491D2F750CFB,
+				6554314783C044397D5463C6,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FADAC5405468B2F1DFFD4C22 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D0BDC5A0D96639E6CCF4DA9,
+				818081F601C5DA5ACD7D79C2,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FDC9115BB787DDA535A7B8AE = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F35CD5B29A6C55FBE1E61C83,
+				DDE829EB57FA22B8735C23A8,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 479E98083B80C0E949050CDE /* Project object */;
+}

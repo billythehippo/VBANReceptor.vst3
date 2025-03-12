@@ -2679,6 +2679,15 @@
     <ClInclude Include="..\..\Source\PluginEditor.h">
       <Filter>VBANReceptor\Source</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\ringbuffer.h">
+      <Filter>VBANReceptor\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\vban.h">
+      <Filter>VBANReceptor\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\vban_functions.h">
+      <Filter>VBANReceptor\Source</Filter>
+    </ClInclude>
     <ClInclude Include="C:\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h">
       <Filter>JUCE Modules\juce_audio_basics\audio_play_head</Filter>
     </ClInclude>
