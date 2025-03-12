@@ -2,9 +2,10 @@
 
 <JUCERPROJECT id="fvbCYe" name="VBANReceptor" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
-              pluginFormats="buildAU,buildAUv3,buildLV2,buildStandalone,buildVST3"
+              pluginFormats="buildAU,buildAUv3,buildLV2,buildStandalone,buildVST,buildVST3"
               pluginManufacturer="billy_the_hippo" pluginVST3Category="Network,Tools"
-              lv2Uri="https://www.github.com/billythehippo/VBANReceptor.vst3">
+              lv2Uri="https://www.github.com/billythehippo/VBANReceptor.vst3"
+              pluginName="VBAN Receptor (2 channels)">
   <MAINGROUP id="kd8SGq" name="VBANReceptor">
     <GROUP id="{A1E10324-E3D2-F2DA-5EC6-110A600FB351}" name="Source">
       <FILE id="JAK5nU" name="PluginProcessor.cpp" compile="1" resource="0"
@@ -14,6 +15,10 @@
       <FILE id="rP4mbZ" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="AshwEE" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="Ih6QHX" name="ringbuffer.h" compile="0" resource="0" file="Source/ringbuffer.h"/>
+      <FILE id="QawLhq" name="vban.h" compile="0" resource="0" file="Source/vban.h"/>
+      <FILE id="PEuw6J" name="vban_functions.h" compile="0" resource="0"
+            file="Source/vban_functions.h"/>
     </GROUP>
   </MAINGROUP>
   <MODULES>
