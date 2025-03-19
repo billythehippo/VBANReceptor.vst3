@@ -14,8 +14,9 @@
 extern std::mutex rbmutex;
 //extern int nbinputs;
 //extern int nboutputs;
-#define nbinputs 2
-#define nboutputs 2
+#define NUMBER_OF_CHANNELS 2
+#define nbinputs NUMBER_OF_CHANNELS
+#define nboutputs NUMBER_OF_CHANNELS
 
 
 class VBANReceptorAudioProcessorEditor;

@@ -18,8 +18,8 @@ std::mutex rbmutex;
 VBANReceptorAudioProcessor::VBANReceptorAudioProcessor()
 
     : AudioProcessor (BusesProperties()
-                        .withInput  ("Input",  juce::AudioChannelSet::discreteChannels(nbinputs), true)
-                        .withOutput ("Output", juce::AudioChannelSet::discreteChannels(nboutputs), true)
+                        .withInput  ("Input",  juce::AudioChannelSet::canonicalChannelSet(nbinputs), true)
+                        .withOutput ("Output", juce::AudioChannelSet::canonicalChannelSet(nboutputs), true)
                       ),
 
     parameters(*this, nullptr, "PARAMETERS",
