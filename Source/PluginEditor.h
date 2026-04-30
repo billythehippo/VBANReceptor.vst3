@@ -16,20 +16,22 @@
 //==============================================================================
 /**
 */
-class VBANReceptorAudioProcessorEditor  : public juce::AudioProcessorEditor
+class VBANReceptorAudioProcessorEditor  : public juce::AudioProcessorEditor, private juce::ChangeListener
 {
 public:
     VBANReceptorAudioProcessorEditor (VBANReceptorAudioProcessor&);
     ~VBANReceptorAudioProcessorEditor() override;
+    void changeListenerCallback(juce::ChangeBroadcaster* source) override;
 
     //==============================================================================
     void paint (juce::Graphics&) override;
     void resized() override;
 
+    void updateIP();
+    void updateSN();
+    void updateCNlabel(int num);
+
     bool gettingParametersFromProcessor = false;
-    juce::TextEditor textEditorIP;
-    juce::TextEditor textEditorPort;
-    juce::TextEditor textEditorSN;
 
 private:
     VBANReceptorAudioProcessor& audioProcessor;
@@ -40,15 +42,17 @@ private:
     juce::Label labelRed;
     juce::Label labelFmt;
     juce::Label labelChannels;
-    juce::ComboBox comboBoxNQ;
-    juce::ComboBox comboBoxFmt;
-    juce::ComboBox comboBoxReceptors;
-    juce::TextButton textButtonScan;
+    juce::TextEditor textEditorIP;
+    juce::TextEditor textEditorPort;
+    juce::TextEditor textEditorSN;
+    juce::Slider sliderNQ;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment>nqAttachment;
     juce::TextButton textButtonGo;
-    juce::ToggleButton pluckingOnOff{"Plucking"};
-
+    std::unique_ptr<juce::AudioProcessorValueTreeState::ButtonAttachment>goButtonAttachment;
+    juce::ToggleButton corButton{"Correction"};
+    std::unique_ptr<juce::AudioProcessorValueTreeState::ButtonAttachment>corButtonAttachment;
     juce::Slider gainSlider;
-    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> gainSliderAttachment;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment>gainSliderAttachment;
 
     bool scanEnabled = false;
     char tempText[16];
